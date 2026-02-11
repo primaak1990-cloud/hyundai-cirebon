@@ -7,7 +7,45 @@
 
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
-<style>
+<style> .ultra-cta{
+position:relative;
+overflow:hidden;
+padding:14px 32px;
+border:none;
+border-radius:40px;
+font-weight:600;
+font-size:15px;
+cursor:pointer;
+color:white;
+background:linear-gradient(90deg,#1f6bff,#00c3ff);
+box-shadow:0 0 20px rgba(0,150,255,0.4);
+transition:0.4s ease;
+}
+
+.ultra-cta:hover{
+transform:translateY(-3px);
+box-shadow:0 0 30px rgba(0,195,255,0.8);
+}
+
+.ultra-cta::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+transition:0.6s;
+}
+
+.ultra-cta:hover::before{
+left:100%;
+}
+
+/* Ripple */
+.ultra-cta:active{
+transform:scale(0.95);
+}
 *{
 margin:0;
 padding:0;
@@ -156,8 +194,10 @@ box-shadow:0 0 20px #2f6bff;
 <img src="stargazer.jpg">
 <h3>Stargazer</h3>
 <div class="price">Mulai Rp 259.700.000</div>
-<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Stargazer" target="_blank">
-<button>Request Quote</button>
+<a <a href="https://wa.me/6287772805133?text=Halo%20saya%20ingin%20request%20penawaran%20Hyundai%20Stargazer"
+   class="cta-btn">
+   Request Quote
+</a>
 </a>
 </div>
 
@@ -165,8 +205,10 @@ box-shadow:0 0 20px #2f6bff;
 <img src="stargazer-cartenz.jpg">
 <h3>Stargazer Cartenz</h3>
 <div class="price">Mulai Rp 277.500.000</div>
-<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Stargazer Cartenz" target="_blank">
-<button>Request Quote</button>
+<a <a href="https://wa.me/6287772805133?text=Halo%20saya%20ingin%20request%20penawaran%20Hyundai%20stargazer cartenz"
+   class="cta-btn">
+   Request Quote
+</a>
 </a>
 </div>
 
@@ -174,8 +216,10 @@ box-shadow:0 0 20px #2f6bff;
 <img src="creta.jpg">
 <h3>Creta</h3>
 <div class="price">Mulai Rp 363.150.000</div>
-<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Creta" target="_blank">
-<button>Request Quote</button>
+<a <a <a href="https://wa.me/6287772805133?text=Halo%20saya%20ingin%20request%20penawaran%20Hyundai%20creta"
+   class="cta-btn">
+   Request Quote
+</a>
 </a>
 </div>
 
@@ -183,8 +227,10 @@ box-shadow:0 0 20px #2f6bff;
 <img src="santa-fe.jpg">
 <h3>Santa Fe</h3>
 <div class="price">Mulai Rp 737.300.000</div>
-<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Santa Fe" target="_blank">
-<button>Request Quote</button>
+<a <a href="https://wa.me/6287772805133?text=Halo%20saya%20ingin%20request%20penawaran%20Hyundai%20santa fe"
+   class="cta-btn">
+   Request Quote
+</a>
 </a>
 </div>
 
@@ -201,8 +247,9 @@ box-shadow:0 0 20px #2f6bff;
 <img src="ioniq5.jpg">
 <h3>IONIQ 5</h3>
 <div class="price">Mulai Rp 810.000.000</div>
-<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran IONIQ 5" target="_blank">
-<button>Request Quote</button>
+<a <a href="https://wa.me/6287772805133?text=Halo%20saya%20ingin%20request%20penawaran%20Hyundai%20ioniq5"
+   class="cta-btn">
+   Request Quote
 </a>
 </div>
 
