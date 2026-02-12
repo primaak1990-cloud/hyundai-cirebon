@@ -3,199 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ardi Hyundai Cirebon Official</title>
+<title>Ardi Hyundai Cirebon | Dominance Edition</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#071c2f,#0e3a5c);
 color:white;
+overflow-x:hidden;
+background:#000;
 }
 
-/* HEADER */
-.header{
+/* VIDEO BACKGROUND */
+.video-bg{
 position:fixed;
 top:0;
 left:0;
-right:0;
-height:70px;
-background:#051522;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+/* Dark overlay */
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
+}
+
+/* HEADER */
+header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 20px;
+padding:20px 30px;
+position:fixed;
+top:0;
+width:100%;
 z-index:1000;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
+height:45px;
 }
 
-.logo img{
-height:40px;
-}
-
-.menu{
-display:flex;
-gap:20px;
-}
-
-.menu a{
+nav a{
 color:white;
 text-decoration:none;
-font-weight:600;
+margin-left:25px;
+font-weight:bold;
+transition:0.3s;
 }
 
-.menu a:hover{
-color:#00e0ff;
+nav a:hover{
+color:#00ffff;
 }
 
 /* HERO */
 .hero{
-padding-top:120px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding-bottom:80px;
+padding-top:120px;
+}
+
+.profile-photo{
+width:260px;
+height:260px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #00ffff;
+box-shadow:0 0 50px rgba(0,255,255,0.8);
+margin-bottom:25px;
 }
 
 .hero h1{
-font-size:28px;
-margin-bottom:20px;
+font-size:42px;
+margin-bottom:10px;
 }
 
-.cta{
-background:#00c853;
-padding:12px 30px;
-border-radius:30px;
-color:white;
+.hero p{
+opacity:0.85;
+margin-bottom:30px;
+}
+
+/* BUTTON */
+.btn{
+padding:15px 40px;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
-}
-
-/* GRID */
-.container{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-padding:20px;
-}
-
-.card{
-background:#0c2b44;
-padding:15px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+margin:10px;
+display:inline-block;
 transition:0.3s;
 }
 
-.card:hover{
-transform:scale(1.03);
+.btn-primary{
+background:#00e0ff;
+color:black;
+}
+
+.btn-primary:hover{
+transform:scale(1.05);
 box-shadow:0 0 25px #00ffff;
-}
-
-.card img{
-width:100%;
-height:150px;
-object-fit:contain;
-}
-
-.price{
-color:#00ff90;
-font-weight:bold;
-margin:10px 0;
-}
-
-.btn{
-display:inline-block;
-margin-top:8px;
-padding:8px 15px;
-border-radius:20px;
-text-decoration:none;
-font-size:13px;
-}
-
-.btn-type{
-background:#00bcd4;
-color:white;
 }
 
 .btn-wa{
 background:#25D366;
 color:white;
 }
+
+.btn-wa:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #25D366;
+}
+
+/* LEAD FORM */
+.lead-section{
+background:#051423;
+padding:60px 20px;
+text-align:center;
+}
+
+.lead-section h2{
+color:#00ffff;
+margin-bottom:20px;
+}
+
+.lead-form{
+max-width:400px;
+margin:auto;
+}
+
+.lead-form input,
+.lead-form select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:none;
+}
+
+.lead-form button{
+width:100%;
+padding:12px;
+background:#00e0ff;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* Floating WA */
+.floating-wa{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:18px;
+border-radius:50%;
+text-decoration:none;
+font-size:22px;
+box-shadow:0 0 20px rgba(37,211,102,0.9);
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
 </style>
 </head>
 
 <body>
 
-<div class="header">
-<div class="logo">
-<img src="logo.png">
-</div>
-<div class="menu">
+<!-- ================= VIDEO CINEMATIC ================= -->
+<!-- GANTI FILE VIDEO DISINI -->
+<video autoplay muted loop class="video-bg">
+<source src="cinematic-video.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<header>
+
+<!-- ================= LOGO HYUNDAI ================= -->
+<!-- GANTI FILE LOGO DISINI -->
+<img src="hyundai-logo.png" class="logo">
+
+<nav>
 <a href="index.html">Home</a>
 <a href="lineup.html">Lineup</a>
-</div>
-</div>
+</nav>
 
-<div class="hero">
+</header>
+
+<section class="hero">
+
+<!-- ================= FOTO ANDA ================= -->
+<!-- GANTI FILE FOTO DISINI -->
+<img src="ardi-banner.png" class="profile-photo">
+
 <h1>Ardi Hyundai Cirebon Official</h1>
-<a href="lineup.html" class="cta">Lihat Semua Unit</a>
+<p>Authorized Hyundai Sales Consultant</p>
+
+<a href="lineup.html" class="btn btn-primary">Lihat Semua Unit</a>
+<a href="https://wa.me/6287772805133" target="_blank" class="btn btn-wa">
+Chat WhatsApp
+</a>
+
+</section>
+
+<section class="lead-section">
+<h2>Konsultasi Gratis Sekarang</h2>
+
+<div class="lead-form">
+<input type="text" placeholder="Nama Anda">
+<input type="tel" placeholder="Nomor WhatsApp">
+<select>
+<option>Pilih Unit</option>
+<option>Stargazer</option>
+<option>Creta</option>
+<option>Kona EV</option>
+<option>IONIQ 5</option>
+<option>Santa Fe</option>
+<option>Palisade</option>
+</select>
+
+<button onclick="kirimWA()">Kirim & Konsultasi</button>
 </div>
 
-<div class="container">
+</section>
 
-<div class="card">
-<img src="stargazer.png">
-<h3>Stargazer</h3>
-<div class="price">Mulai Rp 259.700.000</div>
-<a href="lineup.html#stargazer" class="btn btn-type">Lihat Type</a>
-<a href="https://wa.me/6287772805133?text=Saya%20mau%20info%20Stargazer" class="btn btn-wa">Chat WA</a>
-</div>
+<a href="https://wa.me/6287772805133" class="floating-wa" target="_blank">
+💬
+</a>
 
-<div class="card">
-<img src="stargazer-cartenx.png">
-<h3>Stargazer Cartenz</h3>
-<div class="price">Mulai Rp 277.500.000</div>
-<a href="lineup.html#cartenz" class="btn btn-type">Lihat Type</a>
-<a href="https://wa.me/6287772805133?text=Saya%20mau%20info%20Stargazer%20Cartenz" class="btn btn-wa">Chat WA</a>
-</div>
-
-<div class="card">
-<img src="creta.png">
-<h3>Creta</h3>
-<div class="price">Mulai Rp 363.150.000</div>
-<a href="lineup.html#creta" class="btn btn-type">Lihat Type</a>
-<a href="https://wa.me/6287772805133?text=Saya%20mau%20info%20Creta" class="btn btn-wa">Chat WA</a>
-</div>
-
-<div class="card">
-<img src="kona.png">
-<h3>Kona EV</h3>
-<div class="price">Mulai Rp 566.250.000</div>
-<a href="lineup.html#kona" class="btn btn-type">Lihat Type</a>
-<a href="https://wa.me/6287772805133?text=Saya%20mau%20info%20Kona%20EV" class="btn btn-wa">Chat WA</a>
-</div>
-
-<div class="card">
-<img src="ioniq5.png">
-<h3>IONIQ 5</h3>
-<div class="price">Mulai Rp 810.000.000</div>
-<a href="lineup.html#ioniq" class="btn btn-type">Lihat Type</a>
-<a href="https://wa.me/6287772805133?text=Saya%20mau%20info%20IONIQ5" class="btn btn-wa">Chat WA</a>
-</div>
-
-<div class="card">
-<img src="palisade.png">
-<h3>Palisade HEV</h3>
-<div class="price">Mulai Rp 1.133.400.000</div>
-<a href="lineup.html#palisade" class="btn btn-type">Lihat Type</a>
-<a href="https://wa.me/6287772805133?text=Saya%20mau%20info%20Palisade" class="btn btn-wa">Chat WA</a>
-</div>
-
-</div>
+<script>
+function kirimWA(){
+window.open("https://wa.me/6287772805133?text=Halo saya ingin konsultasi pembelian Hyundai","_blank");
+}
+</script>
 
 </body>
 </html>
