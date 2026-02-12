@@ -1,96 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyundai Line Up 2026</title>
+<title>Hyundai Line Up</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-
 body{
-background:radial-gradient(circle at top,#0a1f44,#000814 70%);
+margin:0;
+font-family:Arial;
+background:#071a2f;
 color:white;
 }
 
 header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 40px;
 display:flex;
 justify-content:space-between;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(20px);
-z-index:1000;
+align-items:center;
+padding:15px 25px;
+background:#000;
 }
 
-header h2{letter-spacing:2px;}
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+height:35px;
+}
 
 nav a{
 color:white;
-margin-left:25px;
 text-decoration:none;
+margin-left:20px;
 }
 
 .container{
-padding:120px 20px 60px;
-max-width:1100px;
-margin:auto;
+padding:40px 20px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-padding:25px;
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
+background:#0d2a4d;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,0,0,0.5);
 }
 
 .card img{
 width:100%;
-border-radius:15px;
+border-radius:12px;
 margin-bottom:15px;
 }
 
 .price{
 color:#00ff9d;
-font-size:18px;
-margin:10px 0;
-}
-
-.toggle-btn{
-padding:10px 25px;
-border:none;
-border-radius:30px;
-background:linear-gradient(90deg,#2f6bff,#00c3ff);
-color:white;
-cursor:pointer;
+font-weight:bold;
 margin-bottom:10px;
 }
 
-.type-box{
-display:none;
-margin-top:10px;
-background:rgba(255,255,255,0.05);
-padding:15px;
-border-radius:10px;
+.type{
+margin:6px 0;
+font-size:14px;
 }
 
-.type-box ul{
-list-style:none;
-}
-
-.type-box li{
-padding:6px 0;
-border-bottom:1px solid rgba(255,255,255,0.1);
+.wa-btn{
+display:inline-block;
+margin-top:8px;
+padding:8px 15px;
+background:#25D366;
+color:white;
+border-radius:25px;
+text-decoration:none;
+font-size:13px;
 }
 </style>
 </head>
@@ -98,30 +84,32 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 <body>
 
 <header>
-<h2>HYUNDAI CIREBON</h2>
+<div class="logo-area">
+<img src="hyundai-logo.png">
+<h3>HYUNDAI CIREBON</h3>
+</div>
+
 <nav>
 <a href="index.html">Home</a>
 </nav>
 </header>
 
-<section class="container">
+<div class="container">
 
 <!-- STARGAZER -->
 <div class="card">
 <img src="stargazer.png">
 <h3>Stargazer</h3>
 <div class="price">Mulai Rp 259.700.000</div>
-<button class="toggle-btn" onclick="toggleBox('sg')">Lihat Tipe</button>
-<div id="sg" class="type-box">
-<ul>
-<li>Active MT — Rp 259.700.000</li>
-<li>Active IVT — Rp 273.100.000</li>
-<li>Essential MT — Rp 271.800.000</li>
-<li>Essential IVT — Rp 283.500.000</li>
-<li>Prime IVT — Rp 333.400.000</li>
-<li>Style — Rp 350.950.000</li>
-</ul>
-</div>
+
+<div class="type">Active MT – Rp 259.700.000</div>
+<div class="type">Active IVT – Rp 273.100.000</div>
+<div class="type">Essential MT – Rp 271.800.000</div>
+<div class="type">Essential IVT – Rp 283.500.000</div>
+<div class="type">Prime IVT – Rp 333.400.000</div>
+<div class="type">Style – Rp 350.950.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
 </div>
 
 <!-- STARGAZER CARTENZ -->
@@ -129,15 +117,13 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 <img src="stargazer-cartenz.png">
 <h3>Stargazer Cartenz</h3>
 <div class="price">Mulai Rp 277.500.000</div>
-<button class="toggle-btn" onclick="toggleBox('cartenz')">Lihat Tipe</button>
-<div id="cartenz" class="type-box">
-<ul>
-<li>Trend MT — Rp 277.500.000</li>
-<li>Trend IVT — Rp 287.750.000</li>
-<li>Style IVT — Rp 298.000.000</li>
-<li>Prime IVT — Rp 359.700.000</li>
-</ul>
-</div>
+
+<div class="type">Trend MT – Rp 277.500.000</div>
+<div class="type">Trend IVT – Rp 287.750.000</div>
+<div class="type">Style MT – Rp 298.000.000</div>
+<div class="type">Prime IVT – Rp 359.700.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
 </div>
 
 <!-- CRETA -->
@@ -145,29 +131,64 @@ border-bottom:1px solid rgba(255,255,255,0.1);
 <img src="creta.png">
 <h3>Creta</h3>
 <div class="price">Mulai Rp 363.150.000</div>
-<button class="toggle-btn" onclick="toggleBox('creta')">Lihat Tipe</button>
-<div id="creta" class="type-box">
-<ul>
-<li>Active — Rp 363.150.000</li>
-<li>Trend — Rp 408.850.000</li>
-<li>Style — Rp 440.000.000</li>
-<li>Prime — Rp 522.500.000</li>
-</ul>
-</div>
+
+<div class="type">New Creta Active – Rp 363.150.000</div>
+<div class="type">New Creta Trend – Rp 408.850.000</div>
+<div class="type">New Creta Prime – Rp 440.000.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
 </div>
 
-</section>
+<!-- KONA EV -->
+<div class="card">
+<img src="kona.png">
+<h3>Kona EV</h3>
+<div class="price">Mulai Rp 566.250.000</div>
 
-<script>
-function toggleBox(id){
-var box=document.getElementById(id);
-if(box.style.display==="block"){
-box.style.display="none";
-}else{
-box.style.display="block";
-}
-}
-</script>
+<div class="type">Style – Rp 566.250.000</div>
+<div class="type">Prime – Rp 584.500.000</div>
+<div class="type">Signature – Rp 652.650.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+</div>
+
+<!-- SANTA FE -->
+<div class="card">
+<img src="santafe.png">
+<h3>Santa Fe</h3>
+<div class="price">Mulai Rp 737.300.000</div>
+
+<div class="type">Prime – Rp 737.300.000</div>
+<div class="type">Calligraphy – Rp 828.600.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+</div>
+
+<!-- IONIQ 5 -->
+<div class="card">
+<img src="ioniq5.png">
+<h3>IONIQ 5</h3>
+<div class="price">Mulai Rp 810.000.000</div>
+
+<div class="type">Prime – Rp 810.000.000</div>
+<div class="type">Signature – Rp 926.600.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+</div>
+
+<!-- PALISADE -->
+<div class="card">
+<img src="palisade.png">
+<h3>Palisade</h3>
+<div class="price">Mulai Rp 1.133.400.000</div>
+
+<div class="type">HEV Signature – Rp 1.133.400.000</div>
+<div class="type">HEV Calligraphy – Rp 1.393.300.000</div>
+
+<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+</div>
+
+</div>
 
 </body>
 </html>
