@@ -41,13 +41,15 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 30px;
+padding:20px 20px;  /* 🔥 UBAH DARI 30px JADI 20px */
 position:fixed;
 top:0;
-width:100%;
+left:0;             /* 🔥 TAMBAH INI */
+right:0;            /* 🔥 TAMBAH INI */
 z-index:1000;
 background:rgba(0,0,0,0.4);
 backdrop-filter:blur(10px);
+box-sizing:border-box;  /* 🔥 TAMBAH INI */
 }
 
 .logo{
