@@ -232,6 +232,48 @@ transition:0.3s;
 color:#00a3e0;
 opacity:1;
 }
+  
+  /* ===== NAVIGATION MENU ===== */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#061421;
+padding:14px 25px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.nav-menu{
+display:flex;
+flex-wrap:wrap;
+}
+
+.nav-menu a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:13px;
+opacity:0.85;
+transition:0.3s;
+}
+
+.nav-menu a:hover{
+color:#00a3e0;
+opacity:1;
+}
+
+  #simulasi{
+scroll-margin-top:90px;
+}
 </style>
 </head>
 
@@ -253,7 +295,12 @@ opacity:1;
 
   <div class="nav-menu">
     <a href="index.html">Home</a>
-    <a href="lineup.html">Lineup</a>
+    <a href="lineup.html">Lineup / Produk</a>
+    <a href="#promo">Promo</a>
+    <a href="#simulasi">Simulasi Kredit</a>
+    <a href="#testdrive">Test Drive</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#kontak">Kontak</a>
   </div>
 </header>
 
@@ -431,9 +478,16 @@ typeTemplate("HEV Calligraphy AWD GRA","1.393.300.000");
 <!-- ================= LANJUTKAN SECTION UNIT LAIN DENGAN FORMAT SAMA ================= -->
 <!-- Kamu tinggal copy block di atas dan ganti id + data -->
 
+<!-- ================= PROMO ================= -->
+
+<div class="section" id="promo">
+<h2>Promo Resmi Hyundai</h2>
+<p>DP Ringan • Cashback • Free Aksesoris • Approval Cepat</p>
+</div>
+  
 <!-- ================= KALKULATOR ================= -->
 
-<div class="calculator">
+<div class="calculator" id="simulasi">
 <h3>Simulasi Kredit (Flat 3.5% / Tahun)</h3>
 
 <input type="number" id="harga" placeholder="Harga OTR">
@@ -478,6 +532,22 @@ document.getElementById("hasil").innerHTML =
 "Estimasi Cicilan: Rp " + Math.round(cicilan).toLocaleString("id-ID") + " / bulan";
 }
 </script>
+<div class="section" id="testdrive">
+<h2>Booking Test Drive</h2>
+<p>Hubungi kami untuk jadwal test drive di rumah atau showroom.</p>
+</div>
 
+<div class="section" id="tentang">
+<h2>Tentang Kami</h2>
+<p>Ardi – Authorized Hyundai Sales Consultant Cirebon.</p>
+</div>
+
+<div class="section" id="kontak">
+<h2>Kontak</h2>
+<p>WhatsApp: 0877-7280-5133</p>
+</div>
+
+</body>
+</html>
 </body>
 </html>
