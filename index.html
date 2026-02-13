@@ -154,11 +154,69 @@ z-index:999;
 50%{transform:scale(1.1);}
 100%{transform:scale(1);}
 }
+
+  /* ===== NAVIGATION MENU ===== */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#061421;
+padding:14px 25px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.nav-menu{
+display:flex;
+flex-wrap:wrap;
+}
+
+.nav-menu a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:13px;
+opacity:0.85;
+transition:0.3s;
+}
+
+.nav-menu a:hover{
+color:#00a3e0;
+opacity:1;
+}
+  
 </style>
 </head>
 
 <body>
 
+<header>
+  <div class="logo-wrap">
+    <img src="hyundai-logo.png" class="logo" style="height:28px;">
+    <span style="font-size:14px;font-weight:600;">
+      ARDI HYUNDAI CIREBON
+    </span>
+  </div>
+
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="lineup.html">Lineup</a>
+    <a href="#promo">Promo</a>
+    <a href="#simulasi">Simulasi Kredit</a>
+    <a href="#testdrive">Test Drive</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+</header>
+  
 <!-- Background Video -->
 <video autoplay muted loop playsinline class="video-bg">
 <source src="cinematic-video.mp4" type="video/mp4">
