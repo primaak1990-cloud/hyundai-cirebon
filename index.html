@@ -51,13 +51,17 @@ overflow-x:hidden;
 }
 
  header{
-    position:relative;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 10px;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#081826; /* SAMA seperti lineup */
+z-index:999;
 }
-
 .logo-wrap{
 display:flex;
 align-items:center;
@@ -66,10 +70,10 @@ gap:12px;
 
 /* 🔥 TAMBAHKAN DI SINI (SETELAH BARIS 65) */
 .logo{
-width:65px;
+width:90px;
 height:auto;
-margin-right:10px;
-filter: drop-shadow(0 0 6px rgba(0,224,255,0.6));
+margin-right:12px;
+filter:none;
 }
 
 .logo-text{
