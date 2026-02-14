@@ -449,6 +449,22 @@ display:block;
   html{
 scroll-behavior:smooth;
 }
+  /* ===== DISCLAIMER SIMULASI ===== */
+.disclaimer-box{
+margin-top:15px;
+padding:12px 14px;
+background:rgba(255,255,255,0.05);
+border-left:3px solid #00e0ff;
+font-size:12px;
+line-height:1.6;
+color:#cccccc;
+border-radius:8px;
+}
+
+.disclaimer-box span{
+color:#00e0ff;
+font-weight:600;
+}
   
 </style>
 </head>
@@ -697,6 +713,14 @@ typeTemplate("HEV Calligraphy AWD GRA","1.393.300.000");
 
 <button onclick="hitung()">Hitung</button>
 <div class="result" id="hasil"></div>
+
+<div class="disclaimer-box">
+<span>ℹ Simulasi Estimasi:</span><br>
+Perhitungan menggunakan estimasi bunga mulai 3,5% flat/tahun.
+Besaran bunga dan cicilan dapat berbeda sesuai program leasing,
+tenor, DP, serta hasil analisa & approval pihak leasing.
+</div>
+
 </div>
 
 <script>
