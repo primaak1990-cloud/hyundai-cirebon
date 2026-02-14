@@ -1,11 +1,11 @@
 /* ============================= */
-/* RESET */
+/* GLOBAL RESET */
 /* ============================= */
 
 body{
   margin:0;
   font-family:'Montserrat',sans-serif;
-  background:#050b12;
+  background:#0b1c2d;
   color:white;
   overflow-x:hidden;
 }
@@ -23,15 +23,13 @@ header{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  background:#081826;
+  background:#061421;
   position:sticky;
   top:0;
   z-index:1000;
 }
 
-/* ============================= */
 /* LOGO */
-/* ============================= */
 
 .logo-wrap{
   display:flex;
@@ -42,23 +40,6 @@ header{
 .logo{
   width:90px;
   height:auto;
-}
-
-.logo-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
-}
-
-.logo-text span:first-child{
-  font-size:10px;
-  letter-spacing:2px;
-  color:#00e0ff;
-}
-
-.logo-text span:last-child{
-  font-size:15px;
-  font-weight:700;
 }
 
 /* ============================= */
@@ -95,7 +76,7 @@ header{
 }
 
 /* ============================= */
-/* SIDE MENU (MOBILE) */
+/* SIDE MENU */
 /* ============================= */
 
 .side-menu{
@@ -132,10 +113,6 @@ header{
   margin-bottom:20px;
 }
 
-/* ============================= */
-/* OVERLAY */
-/* ============================= */
-
 .menu-overlay{
   position:fixed;
   top:0;
@@ -165,4 +142,171 @@ header{
     display:block;
   }
 
+}
+
+/* ============================= */
+/* SECTION */
+/* ============================= */
+
+.section{
+  padding:50px 35px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.section h2{
+  color:#00e0ff;
+  margin-bottom:20px;
+}
+
+/* ============================= */
+/* UNIT IMAGE */
+/* ============================= */
+
+.unit-img{
+  width:100%;
+  max-width:500px;
+  margin:20px 0;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(0,255,255,0.4);
+}
+
+/* ============================= */
+/* TYPE CARD */
+/* ============================= */
+
+.type-card{
+  background:linear-gradient(145deg,#0e2b44,#081c2d);
+  margin:12px 0;
+  padding:18px;
+  border-radius:16px;
+  transition:0.3s;
+}
+
+.type-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 20px rgba(0,255,255,0.6);
+}
+
+.type-title{
+  display:flex;
+  justify-content:space-between;
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+.price{
+  color:#00ff90;
+  font-weight:bold;
+}
+
+.button-group{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.btn{
+  flex:1;
+  text-align:center;
+  padding:9px;
+  border-radius:25px;
+  font-size:13px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.btn-wa{
+  background:#25D366;
+  color:white;
+}
+
+.btn-sim{
+  background:#00e0ff;
+  color:#061421;
+  cursor:pointer;
+}
+
+/* ============================= */
+/* KALKULATOR */
+/* ============================= */
+
+.calculator{
+  background:#0e2b44;
+  padding:25px;
+  border-radius:12px;
+  margin:60px 35px;
+}
+
+.calculator input,
+.calculator select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:none;
+}
+
+.calculator button{
+  width:100%;
+  padding:12px;
+  background:#00e0ff;
+  border:none;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.result{
+  margin-top:10px;
+  color:#00ff90;
+  font-weight:bold;
+}
+
+.disclaimer-box{
+  margin-top:15px;
+  padding:12px 14px;
+  background:rgba(255,255,255,0.05);
+  border-left:3px solid #00e0ff;
+  font-size:12px;
+  line-height:1.6;
+  color:#cccccc;
+  border-radius:8px;
+}
+
+.disclaimer-box span{
+  color:#00e0ff;
+  font-weight:600;
+}
+
+/* ============================= */
+/* BADGE */
+/* ============================= */
+
+.badge-label{
+  display:inline-block;
+  padding:5px 12px;
+  font-size:11px;
+  border-radius:20px;
+  font-weight:bold;
+  margin-left:10px;
+  letter-spacing:0.5px;
+}
+
+.badge-best{
+  background:#ffd700;
+  color:black;
+}
+
+.badge-electric{
+  background:#00ffcc;
+  color:black;
+}
+
+.badge-flagship{
+  background:#c9a227;
+  color:black;
 }
