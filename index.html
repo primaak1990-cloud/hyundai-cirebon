@@ -59,21 +59,36 @@ overflow-x:hidden;
 }
 
 .logo-wrap{
-    display:flex;
-    flex-direction:column;
-    line-height:1.2;
+display:flex;
+flex-direction:column;
+line-height:1.2;
 }
 
-.logo-wrap span:first-child{
-    font-size:12px;
-    letter-spacing:2px;
-    color:#00e0ff;
+/* 🔥 TAMBAHKAN DI SINI (SETELAH BARIS 65) */
+.logo{
+width:32px;
+height:auto;
 }
 
-.logo-wrap span:last-child{
-    font-size:16px;
-    font-weight:bold;
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1.1;
 }
+
+.logo-text span:first-child{
+font-size:10px;
+letter-spacing:2px;
+color:#00e0ff;
+}
+
+.logo-text span:last-child{
+font-size:14px;
+font-weight:600;
+}
+/* 🔥 SAMPAI SINI */
+
+
 
 .menu-toggle{
 position:absolute;
@@ -476,8 +491,11 @@ scroll-behavior:smooth;
 <header>
 
 <div class="logo-wrap">
-    <span>OFFICIAL SALES</span>
-    <span>ARDI HYUNDAI CIREBON</span>
+<img src="hyundai-logo.png" class="logo">
+<div class="logo-text">
+<span>OFFICIAL SALES</span>
+<span>ARDI HYUNDAI CIREBON</span>
+</div>
 </div>
 
 <!-- Desktop Menu -->
