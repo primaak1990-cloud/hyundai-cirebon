@@ -134,3 +134,439 @@ header{
   }
 
 }
+
+body{
+
+  
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#050b12;
+color:white;
+overflow-x:hidden;
+}
+
+ 
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+/* 🔥 TAMBAHKAN DI SINI (SETELAH BARIS 65) */
+.logo{
+width:90px;
+height:auto;
+margin-right:12px;
+filter:none;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1.1;
+}
+
+.logo-text span:first-child{
+font-size:10px;
+letter-spacing:2px;
+color:#00e0ff;
+}
+
+.logo-text span:last-child{
+font-size:15px;
+font-weight:700;
+}
+/* 🔥 SAMPAI SINI */
+
+
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+}
+ 
+/* Cinematic Background */
+.video-bg{
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+object-fit:cover;
+object-position:center center;
+z-index:-2;
+pointer-events:none;
+filter:brightness(30%);
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom,rgba(5,11,18,0.6),rgba(5,11,18,0.95));
+z-index:-1;
+}
+
+/* Container */
+.container{
+max-width:600px;
+margin:auto;
+padding:60px 25px;
+text-align:center;
+animation:fade 1.2s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* Profile */
+.profile{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #00a3e0;
+box-shadow:0 0 40px rgba(0,163,224,0.8);
+}
+
+/* Corporate Title */
+.brand{
+margin-top:25px;
+font-size:20px;
+letter-spacing:1px;
+font-weight:600;
+}
+
+.subtitle{
+margin-top:8px;
+font-size:13px;
+opacity:0.8;
+}
+
+/* Divider */
+.divider{
+width:60px;
+height:2px;
+background:#00a3e0;
+margin:25px auto;
+}
+
+/* Buttons */
+.btn{
+display:block;
+margin:15px 0;
+padding:14px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+font-size:14px;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#00a3e0;
+color:black;
+}
+
+.btn-primary:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(0,163,224,0.6);
+}
+
+.btn-wa{
+background:#25D366;
+color:white;
+}
+
+.btn-wa:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(37,211,102,0.6);
+}
+
+/* Trust Section */
+.trust{
+margin-top:35px;
+font-size:13px;
+line-height:1.9;
+opacity:0.85;
+}
+
+/* Footer */
+.footer{
+margin-top:50px;
+font-size:11px;
+opacity:0.5;
+}
+
+/* Floating WA */
+.floating-wa{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:16px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 0 25px rgba(37,211,102,0.9);
+animation:pulse 1.6s infinite;
+z-index:999;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+  /* ===== NAVIGATION MENU ===== */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#061421;
+padding:14px 25px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.nav-menu{
+display:flex;
+flex-wrap:wrap;
+}
+
+.nav-menu a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:13px;
+opacity:0.85;
+transition:0.3s;
+}.nav-menu a:hover{
+color:#00a3e0;
+opacity:1;
+}
+
+  /* ================= HEADER ================= */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#061421;
+padding:14px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* Desktop Menu */
+.nav-desktop{
+display:flex;
+gap:20px;
+}
+
+.nav-desktop a{
+color:white;
+text-decoration:none;
+font-size:14px;
+opacity:0.85;
+transition:0.3s;
+}
+
+.nav-desktop a:hover{
+color:#00a3e0;
+opacity:1;
+}
+
+/* Hamburger */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+  position:absolute;
+  right:15px;
+  top:15px;
+  z-index:2001;
+}
+
+/* Side Menu */
+.side-menu{
+position:fixed;
+top:0;
+right:-100%;
+width:80%;
+height:100%;
+background:#0b1c2d;
+padding:30px 25px;
+transition:0.4s;
+z-index:2000;
+display:flex;
+flex-direction:column;
+}.side-menu.active{
+right:0;
+}
+
+.side-menu a{
+color:white;
+text-decoration:none;
+font-size:18px;
+margin:15px 0;
+border-bottom:1px solid rgba(255,255,255,0.1);
+padding-bottom:10px;
+}
+
+.close-btn{
+font-size:28px;
+align-self:flex-end;
+cursor:pointer;
+margin-bottom:20px;
+}
+
+/* Overlay */
+.menu-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+z-index:1500;
+}
+
+.menu-overlay.active{
+display:block;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+.nav-desktop{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+ @media (max-width:768px){
+.video-bg{
+object-position:center;
+height:100vh;
+}
+} 
+
+  /* ===== HEADER LOGO FIX ===== */
+.logo-wrap{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+height:22px;
+width:auto;
+}
+
+  /* ===== TENTANG KAMI ===== */
+.about-section{
+padding:80px 20px;
+background:#071a2d;
+text-align:center;
+}
+
+.about-container{
+max-width:800px;
+margin:auto;
+}
+
+.about-section h2{
+font-size:32px;
+margin-bottom:15px;
+color:#00a3e0;
+}.about-highlight{
+font-weight:600;
+margin-bottom:20px;
+color:#ffffff;
+}
+
+.about-section p{
+line-height:1.7;
+color:#cccccc;
+margin-bottom:15px;
+}
+
+.about-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:10px;
+margin:30px 0;
+color:white;
+font-size:15px;
+}
+
+.about-btn{
+display:inline-block;
+background:#00a3e0;
+padding:12px 25px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.about-btn:hover{
+background:#0082b3;
+}
+
+html{
+scroll-behavior:smooth;
+}
+ .footer-links {
+    text-align: center;
+    padding: 30px 20px;
+    background: #081826;
+    margin-top: 40px;
+}
+.footer-links a {
+   display: inline-block;
+   margin: 8px;
+   padding: 8px 16px;
+   background: #0a2a3f;
+   color: #00a3e0;
+   text-decoration: none;
+   border-radius: 20px;
+   font-size: 13px;
+   transition: 0.3s;
+}
+
+.footer-links a:hover {
+    background: #00a3e0;
+    color: white;
+} 
