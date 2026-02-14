@@ -49,6 +49,40 @@ background:#050b12;
 color:white;
 overflow-x:hidden;
 }
+
+ header{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 10px;
+}
+
+.logo-wrap{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+}
+
+.logo-wrap span:first-child{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#00e0ff;
+}
+
+.logo-wrap span:last-child{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.menu-toggle{
+position:absolute;
+right:10px;
+top:12px;
+font-size:28px;
+cursor:pointer;
+}
+ 
 /* Cinematic Background */
 .video-bg{
 position:fixed;
@@ -442,14 +476,8 @@ scroll-behavior:smooth;
 <header>
 
 <div class="logo-wrap">
-<img src="hyundai-logo.png" class="logo">
-<div style="display:flex;flex-direction:column;line-height:1;">
-<span style="font-size:13px;letter-spacing:1px;font-weight:500;color:#ccc;">
-OFFICIAL PARTNER
-</span>
-<span style="font-size:15px;font-weight:700;color:#00a3e0;">
-ARDI HYUNDAI CIREBON
-</span>
+    <span>OFFICIAL SALES</span>
+    <span>ARDI HYUNDAI CIREBON</span>
 </div>
 
 <!-- Desktop Menu -->
