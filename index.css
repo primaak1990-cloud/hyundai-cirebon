@@ -5,24 +5,28 @@ body{
   color:white;
 }
 
+/* ================= HEADER ================= */
+
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 25px;
+  padding:14px 20px;
   background:#081826;
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:3000;
 }
 
-.logo{height:28px;}
+.logo{height:26px;}
 
 .logo-text span{
   display:block;
-  font-size:12px;
+  font-size:11px;
+  line-height:1.2;
 }
 
+/* DESKTOP MENU */
 .nav-desktop{
   display:flex;
   gap:20px;
@@ -34,39 +38,36 @@ header{
   font-size:14px;
 }
 
+/* HAMBURGER ICON */
 .menu-toggle{
   display:none;
-  font-size:28px;
+  font-size:24px;
   cursor:pointer;
+  z-index:4000;
 }
 
-.menu-toggle{
-  position: relative;
-  z-index: 3000;
-}
-
+/* MOBILE */
 @media(max-width:900px){
   .nav-desktop{display:none;}
   .menu-toggle{display:block;}
 }
 
+/* ================= SIDE MENU ================= */
+
 .side-menu{
   position: fixed;
   top: 0;
-  right: -220px;
-  width: 220px;
+  right: -260px;
+  width: 240px;
   height: 100%;
   background: #061421;
-  padding: 25px;
+  padding: 20px;
   transition: 0.3s ease;
-  z-index: 1500;
+  z-index: 3500;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-}
-
-.side-menu{
-  box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+  gap: 14px;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.6);
 }
 
 .side-menu.active{
@@ -77,93 +78,124 @@ header{
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
 }
 
+/* CLOSE BUTTON */
+.close-btn{
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+/* FOOTER MENU */
+.menu-footer{
+  margin-top:auto;
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.menu-footer a{
+  font-size:13px;
+  opacity:0.8;
+}
+
+/* OVERLAY */
 .menu-overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.5);
   display:none;
-  z-index:1000;
+  z-index:3000;
 }
 
 .menu-overlay.active{
   display:block;
 }
 
-.menu-footer{
-  margin-top:auto;
-  border-top:1px solid rgba(255,255,255,0.1);
-  padding-top:15px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
+/* ================= HERO ================= */
 
 .hero{
   text-align:center;
-  padding:100px 20px;
+  padding:90px 20px;
 }
 
 .hero h1{
-  font-size:34px;
+  font-size:28px;
 }
 
+.hero p{
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* CTA */
 .cta-group{
-  margin-top:30px;
+  margin-top:25px;
   display:flex;
-  gap:15px;
+  gap:12px;
   justify-content:center;
   flex-wrap:wrap;
 }
 
 .btn-primary{
   background:#00c3ff;
-  padding:12px 25px;
+  padding:11px 22px;
   border:none;
-  border-radius:30px;
+  border-radius:25px;
   font-weight:bold;
   cursor:pointer;
+  font-size:14px;
 }
 
 .btn-wa{
   background:#25D366;
-  padding:12px 25px;
-  border-radius:30px;
+  padding:11px 22px;
+  border-radius:25px;
   text-decoration:none;
   color:white;
+  font-size:14px;
 }
 
+/* ================= SIMULASI ================= */
+
 .simulasi-section{
-  padding:80px 20px;
+  padding:70px 20px;
   text-align:center;
   background:#081826;
 }
 
 .simulasi-section input,
 .simulasi-section select{
-  width:250px;
+  width:220px;
   padding:10px;
-  margin:8px;
+  margin:6px;
   border-radius:8px;
   border:none;
 }
 
 .simulasi-section button{
-  padding:12px 25px;
+  padding:10px 22px;
   background:#00c3ff;
   border:none;
-  border-radius:25px;
+  border-radius:20px;
   font-weight:bold;
   cursor:pointer;
+  font-size:14px;
 }
 
 .hasil{
   margin-top:15px;
   font-weight:bold;
   color:#00ff90;
+  font-size:14px;
 }
+
+/* ================= MODAL ================= */
 
 .modal{
   display:none;
@@ -172,58 +204,40 @@ header{
   background:rgba(0,0,0,0.7);
   justify-content:center;
   align-items:center;
-  z-index:1200;
+  z-index:5000;
 }
 
 .modal-content{
   background:#0e2b44;
-  padding:25px;
-  border-radius:15px;
+  padding:20px;
+  border-radius:12px;
   width:90%;
-  max-width:400px;
+  max-width:350px;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:8px;
 }
 
 .modal-content input,
 .modal-content select{
-  padding:10px;
+  padding:9px;
   border:none;
   border-radius:8px;
+  font-size:13px;
 }
 
 .modal-content button{
   background:#25D366;
   border:none;
-  padding:12px;
-  border-radius:25px;
+  padding:10px;
+  border-radius:20px;
   font-weight:bold;
   cursor:pointer;
+  font-size:14px;
 }
 
 .close-modal{
   align-self:flex-end;
   cursor:pointer;
-  font-size:20px;
-}
-
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  color:white;
-  cursor:pointer;
-  z-index:2000;
-}
-
-@media(max-width:900px){
-  .menu-toggle{
-    display:block;
-  }
-}
-
-.close-btn{
-  font-size: 20px;
-  cursor: pointer;
-  margin-bottom: 20px;
+  font-size:18px;
 }
