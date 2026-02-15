@@ -274,10 +274,12 @@ header{
 }
 
 .hero{
-  position: relative;
-  overflow: hidden;
-  padding: 120px 20px;
-  text-align: center;
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
 }
 
 .hero-video{
@@ -300,7 +302,9 @@ header{
 .hero-content{
   position:relative;
   z-index:2;
+  max-width:500px;
 }
+
 
 .profile-photo{
   width:120px;
@@ -319,16 +323,13 @@ header{
 }
 
 .sales-photo{
-  position:absolute;
-  bottom:20px;
-  right:20px;
-  width:110px;
-  height:110px;
+  width:120px;
+  height:120px;
   border-radius:50%;
   object-fit:cover;
-  border:4px solid white;
-  box-shadow:0 8px 20px rgba(0,0,0,0.4);
-  z-index:3;
+  border:4px solid #fff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom:20px;
 }
 
 @media (max-width:768px){
