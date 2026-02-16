@@ -5,8 +5,11 @@ body{
   color:white;
 }
 
-/* ================= HEADER ================= */
+body.menu-open{
+  overflow:hidden; /* supaya tidak bisa scroll */
+}
 
+/* HEADER */
 header{
   display:flex;
   justify-content:space-between;
@@ -26,7 +29,6 @@ header{
   line-height:1.2;
 }
 
-/* DESKTOP MENU */
 .nav-desktop{
   display:flex;
   gap:20px;
@@ -38,16 +40,14 @@ header{
   font-size:14px;
 }
 
-/* HAMBURGER ICON */
+/* HAMBURGER */
 .menu-toggle{
-    display:none;
-    font-size:26px;
-    cursor:pointer;
-    position:relative;
-    z-index:7000;
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+  z-index:7000;
 }
 
-/* MOBILE */
 @media(max-width:900px){
   .nav-desktop{display:none;}
   .menu-toggle{display:block;}
@@ -56,40 +56,39 @@ header{
 /* ================= SIDE MENU ================= */
 
 .side-menu{
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 85%;
-    max-width: 320px;
-    height: 100vh;
-    background: #061421;
-    padding: 25px 20px;
-    transition: 0.3s ease;
-    z-index: 6000;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* penting */
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:75%;              /* DIPERKECIL */
+  max-width:280px;        /* DIPERKECIL */
+  height:100vh;
+  background:#061421;
+  padding:60px 20px 20px; /* atas dibuat 60px supaya X tidak tabrakan */
+  transition:0.3s ease;
+  z-index:6000;
+  display:flex;
+  flex-direction:column;
 }
-
 
 .side-menu.active{
   right:0;
 }
 
 .side-menu a{
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  font-size:15px;
+  margin-bottom:18px;
 }
 
-/* CLOSE BUTTON */
-..close-btn{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
+/* CLOSE BUTTON FIX */
+.close-btn{
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:22px;
+  cursor:pointer;
 }
 
 /* FOOTER MENU */
@@ -103,8 +102,9 @@ header{
 }
 
 .menu-footer a{
-  font-size:13px;
-  opacity:0.8;
+  font-size:12px;     /* lebih kecil */
+  font-weight:400;    /* tidak bold */
+  opacity:0.7;
 }
 
 /* OVERLAY */
@@ -118,237 +118,4 @@ header{
 
 .menu-overlay.active{
   display:block;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 500px;
-    padding: 20px;
-}
-
-.hero h1{
-  font-size: 34px;
-  font-weight: 700;
-}
-
-.hero p{
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-/* CTA */
-.cta-group{
-  margin-top:25px;
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn-primary{
-  background:#00c3ff;
-  padding:11px 22px;
-  border:none;
-  border-radius:25px;
-  font-weight:bold;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.btn-wa{
-  background:#25D366;
-  padding:11px 22px;
-  border-radius:25px;
-  text-decoration:none;
-  color:white;
-  font-size:14px;
-}
-
-/* ================= SIMULASI ================= */
-
-.simulasi-section{
-  padding:70px 20px;
-  text-align:center;
-  background:#081826;
-}
-
-.simulasi-section input,
-.simulasi-section select{
-  width:220px;
-  padding:10px;
-  margin:6px;
-  border-radius:8px;
-  border:none;
-}
-
-.simulasi-section button{
-  padding:10px 22px;
-  background:#00c3ff;
-  border:none;
-  border-radius:20px;
-  font-weight:bold;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.hasil{
-  margin-top:15px;
-  font-weight:bold;
-  color:#00ff90;
-  font-size:14px;
-}
-
-/* ================= MODAL ================= */
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  z-index:5000;
-}
-
-.modal-content{
-  background:#0e2b44;
-  padding:20px;
-  border-radius:12px;
-  width:90%;
-  max-width:350px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.modal-content input,
-.modal-content select{
-  padding:9px;
-  border:none;
-  border-radius:8px;
-  font-size:13px;
-}
-
-.modal-content button{
-  background:#25D366;
-  border:none;
-  padding:10px;
-  border-radius:20px;
-  font-weight:bold;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.close-modal{
-  align-self:flex-end;
-  cursor:pointer;
-  font-size:18px;
-}
-
-.hero{
-  min-height:85vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
-}
-
-.hero-video{
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:0;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.65);
-  z-index:1;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:500px;
-}
-
-
-.profile-photo{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  margin:20px auto;
-  border:3px solid #00c3ff;
-}
-
-@media (max-width:768px){
-  .hero{
-    height: 340px;
-    max-width: 95%;
-  }
-}
-
-.sales-photo{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid #fff;
-  box-shadow:0 10px 30px rgba(0,0,0,0.5);
-  margin-bottom:20px;
-}
-
-@media (max-width:768px){
-  .sales-photo{
-    width:85px;
-    height:85px;
-    bottom:15px;
-    right:15px;
-  }
-
-  html, body{
-  overflow-x: hidden;
-}
-  
-body{
-  margin:0;
-}
-
-body.menu-open{
-    overflow: hidden;
 }
