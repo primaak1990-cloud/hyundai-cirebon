@@ -3,13 +3,13 @@
 function openMenu(){
   document.getElementById("sideMenu").classList.add("active");
   document.getElementById("overlay").classList.add("active");
-  document.body.classList.add("menu-open"); // stop scroll
+  document.body.style.overflow = "hidden"; // stop scroll
 }
 
 function closeMenu(){
   document.getElementById("sideMenu").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
-  document.body.classList.remove("menu-open"); // aktifkan scroll lagi
+  document.body.style.overflow = "auto"; // aktif lagi
 }
 
 
