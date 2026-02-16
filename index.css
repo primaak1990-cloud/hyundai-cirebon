@@ -1,8 +1,7 @@
 body{
+  body{
   margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#050b12;
-  color:white;
+  overflow-x:hidden;
 }
 
 body.menu-open{
@@ -56,66 +55,49 @@ header{
 /* ================= SIDE MENU ================= */
 
 .side-menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:75%;              /* DIPERKECIL */
-  max-width:280px;        /* DIPERKECIL */
-  height:100vh;
-  background:#061421;
-  padding:60px 20px 20px; /* atas dibuat 60px supaya X tidak tabrakan */
-  transition:0.3s ease;
-  z-index:6000;
-  display:flex;
-  flex-direction:column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  max-width: 300px;
+  height: 100vh;
+  background: #061421;
+  padding: 60px 25px 30px;
+  transition: 0.3s ease;
+  z-index: 6000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .side-menu.active{
-  right:0;
+  right: 0;
 }
 
 .side-menu a{
-  color:white;
-  text-decoration:none;
-  font-weight:500;
-  font-size:15px;
-  margin-bottom:18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-/* CLOSE BUTTON FIX */
 .close-btn{
-  position:absolute;
-  top:20px;
-  right:20px;
-  font-size:22px;
-  cursor:pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-/* FOOTER MENU */
 .menu-footer{
-  margin-top:auto;
-  border-top:1px solid rgba(255,255,255,0.1);
-  padding-top:12px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
 }
 
-.menu-footer a{
-  font-size:12px;     /* lebih kecil */
-  font-weight:400;    /* tidak bold */
-  opacity:0.7;
-}
-
-/* OVERLAY */
-.menu-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.5);
-  display:none;
-  z-index:5500;
-}
-
-.menu-overlay.active{
-  display:block;
+.small-link{
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  opacity: 0.7;
 }
