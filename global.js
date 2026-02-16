@@ -87,3 +87,13 @@ function hitungSimulasi(){
     Math.round(cicilan).toLocaleString("id-ID") +
     " / bulan";
 }
+
+function openMenu(){
+    document.querySelector(".side-menu").classList.add("active");
+    document.body.classList.add("menu-open");
+}
+
+function closeMenu(){
+    document.querySelector(".side-menu").classList.remove("active");
+    document.body.classList.remove("menu-open");
+}
