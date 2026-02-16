@@ -75,8 +75,8 @@ function kirimTestDrive(){
 
     if(!nama || !telp || !alamat || !tanggal || !lokasi || !unit){
 
-    let pesan =
-`Halo Ardi Hyundai Cirebon,
+    let pesan = `Halo Ardi Hyundai Cirebon,
+
 Saya ingin booking Test Drive:
 
 Nama: ${nama}
