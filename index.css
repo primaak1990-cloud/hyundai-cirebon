@@ -142,9 +142,15 @@ overflow:hidden;
   padding:20px;
 }
 
-.hero-content img{
-  width:130px;
-  margin-bottom:20px;
+.hero-avatar{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #1ea7ff;
+    box-shadow:0 0 25px rgba(30,167,255,0.7);
+    display:block;
+    margin:0 auto 20px auto;
 }
 
 .hero-content h1{
@@ -394,4 +400,35 @@ header{
     border:4px solid #1ea7ff;
     box-shadow:0 0 30px rgba(30,167,255,0.6);
     margin-bottom:15px;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    margin-top:-20px;
+}
+
+.hero h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.tagline,
+.sub-tagline{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.btn-wa,
+.btn-primary{
+    margin-top:12px;
 }
