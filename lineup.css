@@ -1,155 +1,245 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
+
 body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#0b1c2d;
-  color:white;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#0a0f1c;
+    color:white;
+    overflow-x:hidden;
 }
 
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  background:#081826;
-  position:sticky;
-  top:0;
-  z-index:1000;
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:25px;
+    background:linear-gradient(90deg,#0f1b35,#081226);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
-.logo{height:28px;}
-
-.nav-desktop{
-  display:flex;
-  gap:20px;
-  align-items:center;
+.logo{
+    height:40px;
 }
 
-.nav-desktop a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
+.header h1{
+    font-size:20px;
+    letter-spacing:2px;
 }
 
-.btn-testdrive{
-  background:#00c3ff;
-  border:none;
-  padding:8px 15px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:600;
+/* =========================
+   FILTER BUTTON
+========================= */
+
+.filter-section{
+    text-align:center;
+    margin:30px 0;
 }
 
-.lineup-section{
-  padding:80px 20px;
-  text-align:center;
+.filter-section button{
+    background:transparent;
+    border:1px solid #00c3ff;
+    color:#00c3ff;
+    padding:10px 18px;
+    margin:5px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.car-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:50px;
+.filter-section button:hover{
+    background:#00c3ff;
+    color:black;
 }
+
+/* =========================
+   CARD CONTAINER
+========================= */
+
+.car-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
 
 .car-card{
-  background:#102a42;
-  padding:20px;
-  border-radius:15px;
-  transition:0.3s;
+    position:relative;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    transition:0.4s ease;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    transform:translateY(40px);
+    opacity:0;
+}
+
+.car-card.show{
+    transform:translateY(0);
+    opacity:1;
 }
 
 .car-card:hover{
-  transform:translateY(-8px);
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 15px 50px rgba(0,195,255,0.4);
 }
 
 .car-card img{
-  width:100%;
-  border-radius:10px;
+    width:100%;
+    margin-bottom:15px;
+    transition:0.4s;
 }
 
-.car-card button{
-  margin-top:15px;
-  background:#25D366;
-  border:none;
-  padding:10px 20px;
-  border-radius:25px;
-  font-weight:bold;
-  cursor:pointer;
+.car-card:hover img{
+    transform:scale(1.05);
 }
+
+.car-card h2{
+    margin:10px 0;
+    font-size:18px;
+    color:#00c3ff;
+}
+
+/* =========================
+   TYPE LIST
+========================= */
+
+.type-list{
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.type-list p{
+    margin:4px 0;
+    border-bottom:1px dashed rgba(255,255,255,0.1);
+    padding-bottom:4px;
+}
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.btn-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.btn-group button,
+.spk-btn{
+    flex:1;
+    background:linear-gradient(45deg,#00c3ff,#0077ff);
+    border:none;
+    padding:10px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+}
+
+.btn-group button:hover,
+.spk-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #00c3ff;
+}
+
+/* =========================
+   BADGE BEST SELLER
+========================= */
+
+.badge{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:gold;
+    color:black;
+    font-size:11px;
+    font-weight:bold;
+    padding:6px 10px;
+    border-radius:20px;
+    box-shadow:0 0 15px gold;
+}
+
+/* =========================
+   MODAL STYLE
+========================= */
 
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
 }
 
 .modal-content{
-  background:#0e2b44;
-  padding:25px;
-  border-radius:15px;
-  width:90%;
-  max-width:400px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+    background:#111c2e;
+    padding:30px;
+    border-radius:15px;
+    width:90%;
+    max-width:400px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.8);opacity:0;}
+    to{transform:scale(1);opacity:1;}
 }
 
 .modal-content input,
 .modal-content select{
-  padding:10px;
-  border:none;
-  border-radius:8px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
 }
 
 .modal-content button{
-  background:#25D366;
-  border:none;
-  padding:12px;
-  border-radius:25px;
-  font-weight:bold;
-  cursor:pointer;
+    background:#00c3ff;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.close-modal{
-  align-self:flex-end;
-  cursor:pointer;
-  font-size:20px;
+.close{
+    text-align:right;
+    cursor:pointer;
+    font-size:14px;
+    margin-top:5px;
 }
 
-@media(max-width:900px){
-  .nav-desktop{display:none;}
-  .menu-toggle{display:block;}
-}
-.simulasi-section{
-  padding:80px 20px;
-  text-align:center;
-  background:#081826;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-.simulasi-section input,
-.simulasi-section select{
-  width:250px;
-  padding:10px;
-  margin:8px;
-  border-radius:8px;
-  border:none;
-}
-
-.simulasi-section button{
-  padding:12px 25px;
-  background:#00c3ff;
-  border:none;
-  border-radius:25px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.hasil{
-  margin-top:15px;
-  font-weight:bold;
-  color:#00ff90;
+@media(max-width:768px){
+    .car-container{
+        padding:20px;
+    }
 }
