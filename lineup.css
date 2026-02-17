@@ -298,3 +298,21 @@ border-radius:8px;
 cursor:pointer;
 color:white;
 }
+
+
+.btn-spk-link{
+display:inline-block;
+background:#00c3ff;
+padding:10px 14px;
+border-radius:8px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+margin-top:8px;
+transition:0.3s;
+}
+
+.btn-spk-link:hover{
+background:white;
+transform:scale(1.05);
+}
