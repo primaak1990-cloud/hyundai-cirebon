@@ -1,159 +1,187 @@
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#050b12;
-  color:white;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lineup Hyundai Cirebon 2026</title>
+<link rel="stylesheet" href="lineup.css">
+<script defer src="global.js"></script>
+</head>
 
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  background:#081826;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
+<body>
 
-.logo{height:28px;}
+<header class="header">
+    <img src="hyundai-logo.png" class="logo">
+    <h1>LINEUP HYUNDAI CIREBON 2026</h1>
+</header>
 
-.nav-desktop{
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-
-.nav-desktop a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-}
-
-.btn-testdrive{
-  background:#00c3ff;
-  border:none;
-  padding:8px 15px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:600;
-}
-
-.hero{
-  text-align:center;
-  padding:120px 20px;
-}
-
-.hero h1{
-  font-size:40px;
-}
-
-.cta-group{
-  margin-top:30px;
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn-primary{
-  background:#00c3ff;
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.btn-wa{
-  background:#25D366;
-  padding:12px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  color:white;
-}
-
-.floating-cta{
-  position:fixed;
-  bottom:25px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:9999;
-}
-
-.floating-cta button{
-  background:linear-gradient(45deg,#00c3ff,#0066ff);
-  border:none;
-  padding:14px 28px;
-  border-radius:30px;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
-
-.modal-content{
-  background:#0e2b44;
-  padding:25px;
-  border-radius:15px;
-  width:90%;
-  max-width:400px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.modal-content input,
-.modal-content select{
-  padding:10px;
-  border:none;
-  border-radius:8px;
-}
-
-.modal-content button{
-  background:#25D366;
-  border:none;
-  padding:12px;
-  border-radius:25px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.close-modal{
-  align-self:flex-end;
-  cursor:pointer;
-  font-size:20px;
-}
-
-@media(max-width:900px){
-  .nav-desktop{display:none;}
-  .menu-toggle{display:block;}
-}
-
-<section class="simulasi-section" id="simulasi">
-  <h2>Simulasi Kredit</h2>
-
-  <input type="number" id="harga" placeholder="Harga OTR">
-  <input type="number" id="dp" placeholder="DP">
-
-  <select id="tenor">
-    <option value="1">1 Tahun</option>
-    <option value="2">2 Tahun</option>
-    <option value="3">3 Tahun</option>
-    <option value="4">4 Tahun</option>
-    <option value="5">5 Tahun</option>
-  </select>
-
-  <button onclick="hitungSimulasi()">Hitung</button>
-
-  <div class="hasil" id="hasil"></div>
+<section class="filter-section">
+    <button onclick="filterModel('all')">Semua</button>
+    <button onclick="filterModel('stargazer')">Stargazer</button>
+    <button onclick="filterModel('cartenz')">Cartenz</button>
+    <button onclick="filterModel('creta')">Creta</button>
+    <button onclick="filterModel('kona')">Kona EV</button>
+    <button onclick="filterModel('ioniq')">Ioniq 5</button>
+    <button onclick="filterModel('santafe')">Santa Fe</button>
+    <button onclick="filterModel('palisade')">Palisade</button>
 </section>
+
+<section class="car-container">
+
+<!-- ================= STARGAZER ================= -->
+<div class="car-card stargazer best">
+<span class="badge">BEST SELLER</span>
+<img src="stargazer.png">
+<h2>HYUNDAI STARGAZER</h2>
+
+<div class="type-list">
+<p>Active MT - Rp 259.700.000</p>
+<p>Active IVT - Rp 273.100.000</p>
+<p>Essential MT 7 Seat - Rp 271.800.000</p>
+<p>Essential IVT 7 Seat - Rp 283.500.000</p>
+<p>Prime IVT 7 Seat - Rp 333.400.000</p>
+<p>X Prime 7 Seat - Rp 360.300.000</p>
+</div>
+
+<div class="btn-group">
+<button onclick="openSimulasi('Stargazer',259700000)">Simulasi Kredit</button>
+<button onclick="openTestDrive('Stargazer')">Test Drive</button>
+<a href="spk.html" target="_blank" class="spk-btn">SPK</a>
+</div>
+</div>
+
+<!-- ================= CARTENZ ================= -->
+<div class="car-card cartenz">
+<img src="stargazer-cartenz.png">
+<h2>STARGAZER CARTENZ</h2>
+
+<div class="type-list">
+<p>Trend MT - Rp 277.500.000</p>
+<p>Trend IVT - Rp 287.750.000</p>
+<p>Prime IVT - Rp 359.700.000</p>
+<p>Prime Package - Rp 405.700.000</p>
+</div>
+
+<div class="btn-group">
+<button onclick="openSimulasi('Cartenz',277500000)">Simulasi Kredit</button>
+<button onclick="openTestDrive('Cartenz')">Test Drive</button>
+<a href="spk.html" target="_blank" class="spk-btn">SPK</a>
+</div>
+</div>
+
+<!-- ================= KONA EV ================= -->
+<div class="car-card kona">
+<img src="kona-ev.png">
+<h2>KONA EV 2026</h2>
+
+<div class="type-list">
+<p>Style Reguler - Rp 566.250.000</p>
+<p>Prime Reguler - Rp 584.500.000</p>
+<p>Signature Extended - Rp 669.550.000</p>
+<p>N Line - Rp 690.550.000</p>
+</div>
+
+<div class="btn-group">
+<button onclick="openSimulasi('Kona EV',566250000)">Simulasi Kredit</button>
+<button onclick="openTestDrive('Kona EV')">Test Drive</button>
+<a href="spk.html" target="_blank" class="spk-btn">SPK</a>
+</div>
+</div>
+
+<!-- ================= IONIQ 5 ================= -->
+<div class="car-card ioniq">
+<img src="ioniq5.png">
+<h2>IONIQ 5 2026</h2>
+
+<div class="type-list">
+<p>Prime Reguler - Rp 810.000.000</p>
+<p>Prime Extended - Rp 852.500.000</p>
+<p>Signature Reguler - Rp 874.900.000</p>
+<p>Signature Extended - Rp 926.600.000</p>
+</div>
+
+<div class="btn-group">
+<button onclick="openSimulasi('Ioniq 5',810000000)">Simulasi Kredit</button>
+<button onclick="openTestDrive('Ioniq 5')">Test Drive</button>
+<a href="spk.html" target="_blank" class="spk-btn">SPK</a>
+</div>
+</div>
+
+<!-- ================= SANTA FE ================= -->
+<div class="car-card santafe">
+<img src="santafe.png">
+<h2>SANTA FE 2026</h2>
+
+<div class="type-list">
+<p>2.5 Prime - Rp 737.300.000</p>
+<p>2.5 Calligraphy - Rp 826.800.000</p>
+<p>1.6 HEV Prime - Rp 828.900.000</p>
+<p>1.6 HEV Calligraphy - Rp 916.200.000</p>
+</div>
+
+<div class="btn-group">
+<button onclick="openSimulasi('Santa Fe',737300000)">Simulasi Kredit</button>
+<button onclick="openTestDrive('Santa Fe')">Test Drive</button>
+<a href="spk.html" target="_blank" class="spk-btn">SPK</a>
+</div>
+</div>
+
+<!-- ================= PALISADE ================= -->
+<div class="car-card palisade">
+<img src="palisade.png">
+<h2>PALISADE 2026</h2>
+
+<div class="type-list">
+<p>HEV Signature - Rp 1.133.400.000</p>
+<p>HEV Calligraphy - Rp 1.306.200.000</p>
+<p>HEV Calligraphy AWD - Rp 1.393.300.000</p>
+</div>
+
+<div class="btn-group">
+<button onclick="openSimulasi('Palisade',1133400000)">Simulasi Kredit</button>
+<button onclick="openTestDrive('Palisade')">Test Drive</button>
+<a href="spk.html" target="_blank" class="spk-btn">SPK</a>
+</div>
+</div>
+
+</section>
+
+<!-- POPUP SIMULASI -->
+<div id="simulasiModal" class="modal">
+<div class="modal-content">
+<h3>Simulasi Kredit</h3>
+<input type="number" id="harga" placeholder="Harga OTR">
+<input type="number" id="dp" placeholder="DP">
+<select id="tenor">
+<option value="12">1 Tahun</option>
+<option value="24">2 Tahun</option>
+<option value="36">3 Tahun</option>
+<option value="48">4 Tahun</option>
+<option value="60">5 Tahun</option>
+</select>
+<button onclick="hitungCicilan()">Hitung</button>
+<div id="hasil"></div>
+<button onclick="kirimWA()">Kirim ke WhatsApp</button>
+<span onclick="closeModal()" class="close">X</span>
+</div>
+</div>
+
+<!-- POPUP TEST DRIVE -->
+<div id="testDriveModal" class="modal">
+<div class="modal-content">
+<h3>Form Test Drive</h3>
+<input type="text" placeholder="Nama">
+<input type="text" placeholder="Alamat">
+<input type="text" placeholder="No HP">
+<input type="date">
+<select>
+<option>Rumah</option>
+<option>Dealer</option>
+</select>
+<button>Kirim</button>
+<span onclick="closeModal()" class="close">X</span>
+</div>
+</div>
+
+</body>
+</html>
