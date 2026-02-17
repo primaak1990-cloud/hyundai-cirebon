@@ -1,49 +1,24 @@
-/*=====================================
-   UNIVERSAL GLOBAL SCRIPT
-   INDEX + LINEUP SAFE
-===================================== */
-
 /* =====================================
-   HAMBURGER MENU
+   TOGGLE HAMBURGER MENU
 ===================================== */
 
-function openMenu(){
-    const menu = document.getElementById("sideMenu");
-    const overlay = document.getElementById("overlay");
-
-    if(menu) menu.classList.add("active");
-    if(overlay) overlay.classList.add("active");
-
-    document.body.style.overflow = "hidden";
-}
-
-function closeMenu(){
-    const menu = document.getElementById("sideMenu");
-    const overlay = document.getElementById("overlay");
-
-    if(menu) menu.classList.remove("active");
-    if(overlay) overlay.classList.remove("active");
-
-    document.body.style.overflow = "auto";
-}
-
-/* =====================================
-   FILTER MODEL (LINEUP)
-===================================== */
 function toggleMenu(){
     const menu = document.getElementById("sideMenu");
     const overlay = document.getElementById("overlay");
 
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
+    if(menu) menu.classList.toggle("active");
+    if(overlay) overlay.classList.toggle("active");
 
-    if(menu.classList.contains("active")){
+    if(menu && menu.classList.contains("active")){
         document.body.style.overflow="hidden";
     }else{
         document.body.style.overflow="auto";
     }
 }
 
+/* =====================================
+   FILTER MODEL (LINEUP)
+===================================== */
 
 function filterModel(model){
     const cards = document.querySelectorAll(".car-block");
@@ -62,11 +37,13 @@ function filterModel(model){
 }
 
 /* =====================================
-   SIMULASI KREDIT POPUP
+   SIMULASI KREDIT
 ===================================== */
 
 function openSimulasi(unitNama, hargaOTR){
-    document.getElementById("simulasiModal").style.display = "flex";
+    const modal = document.getElementById("simulasiModal");
+    if(modal) modal.style.display = "flex";
+
     document.body.style.overflow = "hidden";
 
     if(unitNama){
@@ -74,27 +51,39 @@ function openSimulasi(unitNama, hargaOTR){
     }
 
     if(hargaOTR){
-        document.getElementById("harga").value = hargaOTR;
+        document.getElementById("hargaOTR").value = hargaOTR;
+
+        // Auto isi DP minimal 20%
+        let minDP = Math.round(hargaOTR * 0.2);
+        document.getElementById("dpPersen").value = 20;
     }
 }
 
 function closeSimulasi(){
-    document.getElementById("simulasiModal").style.display = "none";
+    const modal = document.getElementById("simulasiModal");
+    if(modal) modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
 
 function hitungSimulasi(){
-    let harga = parseInt(document.getElementById("hargaOTR").value);
-let dpPersen = parseInt(document.getElementById("dpPersen").value);
-let tenor = parseInt(document.getElementById("tenor").value);
 
-let dp = harga * dpPersen / 100;
-    if(!harga || !dp || !tenor){
+    let harga = parseInt(document.getElementById("hargaOTR").value);
+    let dpPersen = parseInt(document.getElementById("dpPersen").value);
+    let tenor = parseInt(document.getElementById("tenor").value);
+
+    if(!harga || !dpPersen || !tenor){
         alert("Lengkapi semua data!");
         return;
     }
 
+    if(dpPersen < 20){
+        alert("DP minimal 20%");
+        return;
+    }
+
+    let dp = harga * dpPersen / 100;
     let pokok = harga - dp;
+
     let bunga = pokok * (0.035 * tenor);
     let total = pokok + bunga;
     let cicilan = total / (tenor * 12);
@@ -108,7 +97,7 @@ let dp = harga * dpPersen / 100;
 
 Simulasi Kredit:
 Harga OTR: Rp ${harga.toLocaleString("id-ID")}
-DP: Rp ${dp.toLocaleString("id-ID")}
+DP: ${dpPersen}%
 Tenor: ${tenor} Tahun
 Estimasi Cicilan: Rp ${Math.round(cicilan).toLocaleString("id-ID")} / bulan`;
 
@@ -117,11 +106,13 @@ Estimasi Cicilan: Rp ${Math.round(cicilan).toLocaleString("id-ID")} / bulan`;
 }
 
 /* =====================================
-   TEST DRIVE POPUP
+   TEST DRIVE
 ===================================== */
 
 function openTestDrive(unitNama){
-    document.getElementById("testDriveModal").style.display = "flex";
+    const modal = document.getElementById("testDriveModal");
+    if(modal) modal.style.display = "flex";
+
     document.body.style.overflow = "hidden";
 
     if(unitNama){
@@ -130,11 +121,13 @@ function openTestDrive(unitNama){
 }
 
 function closeTestDrive(){
-    document.getElementById("testDriveModal").style.display = "none";
+    const modal = document.getElementById("testDriveModal");
+    if(modal) modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
 
 function kirimTestDrive(){
+
     let nama = document.getElementById("tdNama").value;
     let telp = document.getElementById("tdTelp").value;
     let alamat = document.getElementById("tdAlamat").value;
@@ -163,11 +156,13 @@ Lokasi: ${lokasi}`;
 }
 
 /* =====================================
-   FORM SPK POPUP + REKENING PERUSAHAAN
+   SPK
 ===================================== */
 
 function openSPK(unitNama){
-    document.getElementById("spkModal").style.display = "flex";
+    const modal = document.getElementById("spkModal");
+    if(modal) modal.style.display = "flex";
+
     document.body.style.overflow = "hidden";
 
     if(unitNama){
@@ -176,11 +171,13 @@ function openSPK(unitNama){
 }
 
 function closeSPK(){
-    document.getElementById("spkModal").style.display = "none";
+    const modal = document.getElementById("spkModal");
+    if(modal) modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
 
 function kirimSPK(){
+
     let nama = document.getElementById("spkNama").value;
     let telp = document.getElementById("spkTelp").value;
     let alamat = document.getElementById("spkAlamat").value;
@@ -209,7 +206,7 @@ Bank BCA     : 1341737007
 Bank Permata : 7601009808
 ================================
 
-Mohon konfirmasi pembayaran setelah transfer.`;
+Terima kasih.`;
 
     window.open("https://wa.me/6287772805133?text=" + encodeURIComponent(pesan));
 
