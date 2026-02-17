@@ -354,8 +354,13 @@ font-size:14px;
 
 /* ===== HAMBURGER ===== */
 .hamburger{
-font-size:26px;
-cursor:pointer;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:20px;
+    z-index:9999;
 }
 
 /* ===== SIDE MENU ===== */
