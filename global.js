@@ -287,5 +287,13 @@ Lokasi: ${lokasi}`;
 
 window.open(`https://wa.me/6287772805133?text=${pesan}`);
 }
+
+function toggleMenu(){
+const menu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+}
     });
 });
