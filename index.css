@@ -305,3 +305,9 @@ color:#00c3ff;
 font-size:12px;
 text-decoration:none;
 }
+
+
+html, body {
+    overflow-x: hidden;
+    touch-action: manipulation;
+}
