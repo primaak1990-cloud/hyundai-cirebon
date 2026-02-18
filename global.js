@@ -202,3 +202,16 @@ Lokasi: ${lokasi}`;
 
   window.open("https://wa.me/6287772805133?text=" + encodeURIComponent(pesan));
 }
+/* ==============================
+   ANIMASI SCROLL
+==============================*/
+document.addEventListener("scroll", function(){
+  const elements = document.querySelectorAll(".fade-up");
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+    if(position < screenPosition){
+      el.classList.add("show");
+    }
+  });
+});
