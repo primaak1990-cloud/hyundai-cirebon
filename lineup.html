@@ -203,6 +203,12 @@
 <label>Harga OTR</label>
 <input type="number" id="hargaOTR" placeholder="Masukkan harga">
 
+<label>Metode DP</label>
+<select id="dpMode" onchange="aturDPMode()">
+  <option value="auto">Otomatis 20%</option>
+  <option value="manual">Input Manual</option>
+</select>
+
 <label>DP (%)</label>
 <input type="number" id="dpPersen" value="20" readonly>
 
