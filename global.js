@@ -221,6 +221,17 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         content.style.display = "block";
       }
+function aturDPMode(){
+  const mode = document.getElementById("dpMode").value;
+  const dpInput = document.getElementById("dpPersen");
+
+  if(mode === "auto"){
+      dpInput.value = 20;
+      dpInput.setAttribute("readonly", true);
+  } else {
+      dpInput.removeAttribute("readonly");
+  }
+}
 
     });
   });
