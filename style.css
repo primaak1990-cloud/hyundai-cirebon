@@ -444,3 +444,10 @@ footer {
     font-weight:600;
     color:white;
 }
+
+.badge-ev{
+    background: linear-gradient(135deg, #00e5ff, #00bcd4);
+    color:#001a1f;
+    font-weight:600;
+    box-shadow:0 0 12px rgba(0,229,255,0.6);
+}
