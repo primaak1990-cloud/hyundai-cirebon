@@ -249,3 +249,52 @@ Lokasi: ${lokasi}`;
 
   window.open("https://wa.me/6287772805133?text=" + encodeURIComponent(pesan));
 }
+
+function formatRupiah(angka){
+  return "Rp " + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function isiOTR(){
+  const unit = document.getElementById("unitSelect").value;
+  const type = document.getElementById("typeSelect").value;
+
+  if(mobilData[unit] && mobilData[unit][type]){
+    const harga = mobilData[unit][type];
+    document.getElementById("hargaOTR").value = formatRupiah(harga);
+  }
+}
+
+function setDPMode(){
+  const mode = document.getElementById("dpMode").value;
+  const dpInput = document.getElementById("dpInput");
+
+  if(mode === "manual"){
+    dpInput.style.display = "block";
+  }else{
+    dpInput.style.display = "none";
+  }
+}
+
+function hitungSimulasi(){
+  const hargaText = document.getElementById("hargaOTR").value.replace(/\D/g,'');
+  const harga = parseInt(hargaText);
+
+  const tenor = parseInt(document.getElementById("tenor").value);
+  const dpMode = document.getElementById("dpMode").value;
+  let dp;
+
+  if(dpMode === "manual"){
+    dp = parseInt(document.getElementById("dpInput").value.replace(/\D/g,''));
+  }else{
+    dp = harga * 0.2;
+  }
+
+  const pokok = harga - dp;
+  const bunga = 0.05; 
+  const total = pokok + (pokok * bunga * tenor);
+  const cicilan = total / (tenor * 12);
+
+  document.getElementById("hasilCicilan").innerHTML =
+    "DP: " + formatRupiah(Math.round(dp)) + "<br>" +
+    "Cicilan / bulan: <b>" + formatRupiah(Math.round(cicilan)) + "</b>";
+}
