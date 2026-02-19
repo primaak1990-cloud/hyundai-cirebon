@@ -415,3 +415,32 @@ footer {
     z-index:998;
     display:none;
 }
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.logo img{
+    height:32px;
+    width:auto;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.logo-text span{
+    font-size:10px;
+    letter-spacing:1px;
+    color:#ccc;
+}
+
+.logo-text strong{
+    font-size:14px;
+    font-weight:600;
+    color:white;
+}
