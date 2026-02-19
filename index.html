@@ -37,31 +37,43 @@
 </section>
 
 <!-- ================= SIMULASI MODAL ================= -->
-<div id="simulasiModal" class="modal">
-  <div class="modal-content">
-    <h3>Simulasi Kredit</h3>
+<!-- ================= SIMULASI MODAL ================= -->
+<div id="simulasiModal" class="simulasi-overlay">
 
+  <div class="simulasi-box">
+    <h2>Simulasi Kredit</h2>
+
+    <label>Unit</label>
     <select id="unitSelect" onchange="loadType()">
       <option value="">Pilih Unit</option>
-      <option value="Stargazer">Stargazer</option>
-      <option value="Stargazer Cartenz">Stargazer Cartenz</option>
-      <option value="Creta">Creta</option>
-      <option value="Kona EV">Kona EV</option>
-      <option value="IONIQ 5">IONIQ 5</option>
-      <option value="Santa Fe">Santa Fe</option>
-      <option value="Palisade">Palisade</option>
+      <option>Stargazer</option>
+      <option>Stargazer Cartenz</option>
+      <option>Creta</option>
+      <option>Kona EV</option>
+      <option>IONIQ 5</option>
+      <option>Santa Fe</option>
+      <option>Palisade</option>
     </select>
 
+    <label>Type</label>
     <select id="typeSelect" onchange="isiOTR()">
       <option value="">Pilih Type</option>
     </select>
 
-    <input type="number" id="hargaOTR" placeholder="Harga OTR">
+    <label>Harga OTR</label>
+    <input type="text" id="hargaOTR" readonly>
 
-    <input type="number" id="dpPersen" placeholder="DP (%)">
-    <button class="btn btn-outline" onclick="isiDP20()">DP 20%</button>
+    <label>DP</label>
+    <select id="dpMode" onchange="setDPMode()">
+      <option value="20">DP 20% (Rekomendasi)</option>
+      <option value="manual">Input Manual</option>
+    </select>
 
+    <input type="text" id="dpInput" placeholder="Masukkan DP Manual" style="display:none;">
+
+    <label>Tenor</label>
     <select id="tenor">
+      <option value="">Pilih Tenor</option>
       <option value="1">1 Tahun</option>
       <option value="2">2 Tahun</option>
       <option value="3">3 Tahun</option>
@@ -69,11 +81,16 @@
       <option value="5">5 Tahun</option>
     </select>
 
-    <button class="btn btn-primary" onclick="hitungSimulasi()">Hitung</button>
+    <button class="btn-hitung" onclick="hitungSimulasi()">Hitung</button>
 
-    <div id="hasilCicilan" style="margin-top:10px;"></div>
+    <div id="hasilCicilan" class="hasil-box"></div>
 
-    <button class="btn btn-outline" onclick="closeSimulasi()">Tutup</button>
+    <p class="disclaimer">
+      *Simulasi ini bukan perhitungan resmi leasing/bank.
+      Angka dapat berubah sesuai kebijakan pembiayaan.*
+    </p>
+
+    <button class="btn-tutup" onclick="closeSimulasi()">Tutup</button>
   </div>
 </div>
 
