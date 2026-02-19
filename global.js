@@ -219,18 +219,18 @@ document.addEventListener("scroll", function(){
 /* ==============================
    FILTER UNIT
 ==============================*/
-function filterUnit(unit){
-  const cards = document.querySelectorAll(".unit-card");
+function filterUnit(unit) {
+    const cards = document.querySelectorAll(".unit-card");
 
-  cards.forEach(card=>{
-    if(unit === "all"){
-      card.style.display = "block";
-    } else {
-      if(card.innerText.includes(unit)){
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    }
-  });
+    cards.forEach(card => {
+        const cardUnit = card.getAttribute("data-unit");
+
+        if (unit === "all") {
+            card.style.display = "block";
+        } else if (cardUnit && cardUnit.toLowerCase() === unit.toLowerCase()) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
 }
