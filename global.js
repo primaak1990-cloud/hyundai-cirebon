@@ -365,3 +365,17 @@ const noAdmin = "6287772805133"; // Ganti jika perlu
 window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`,"_blank");
 
 }
+
+function kirimUnitWA(namaUnit){
+
+const pesan = `Halo Ardi Hyundai 👋
+
+Saya tertarik dengan unit ${namaUnit}.
+
+Mohon info harga OTR dan promo terbaru 🙏`;
+
+const noAdmin = "6287772805133";
+
+window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`,"_blank");
+
+}
