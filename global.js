@@ -298,3 +298,26 @@ function generatePDF(){
 <button class="btn btn-outline" onclick="generatePDF()">
 Download PDF
 </button>
+}
+function kirimLead(){
+
+fetch("https://script.google.com/macros/s/AKfycbyDfxlYV7fgeozPemJck84dyNBxWkQyikfUWlPYi6Js548vg7CCVtnOy9kcnXrbi4o25A/exec",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body: JSON.stringify({
+nama: document.getElementById("tdNama").value,
+hp: document.getElementById("tdHP").value,
+unit: document.getElementById("tdUnit").value,
+type: document.getElementById("typeSelect")?.value || "-"
+})
+})
+.then(res=>res.json())
+.then(data=>{
+alert("Lead berhasil masuk database 🔥");
+})
+.catch(err=>{
+alert("Error kirim data");
+});
+}
