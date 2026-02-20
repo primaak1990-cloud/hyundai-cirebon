@@ -295,3 +295,6 @@ function generatePDF(){
   newWindow.document.write(content);
   newWindow.print();
 }
+<button class="btn btn-outline" onclick="generatePDF()">
+Download PDF
+</button>
