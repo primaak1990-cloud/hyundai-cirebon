@@ -3,334 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyundai Cirebon Lineup</title>
-
-<style>
-body{
-  margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:linear-gradient(135deg,#0f1c2e,#162b4e);
-  color:white;
-}
-
-.container{
-  width:95%;
-  max-width:1100px;
-  margin:auto;
-  padding:30px 0;
-}
-
-.unit-card{
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:30px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
-.unit-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
-.unit-header h2{
-  margin:0;
-}
-
-.btn{
-  padding:8px 18px;
-  border:none;
-  border-radius:25px;
-  cursor:pointer;
-  font-weight:bold;
-  margin-top:8px;
-}
-
-.btn-primary{
-  background:linear-gradient(45deg,#1fa2ff,#12d8fa);
-  color:white;
-}
-
-.btn-success{
-  background:#25D366;
-  color:white;
-}
-
-.type-list{
-  display:none;
-  margin-top:15px;
-}
-
-.type-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 0;
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  flex-wrap:wrap;
-}
-
-.modal{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.85);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999;
-}
-
-.modal-content{
-  background:#1c2f4f;
-  padding:25px;
-  border-radius:15px;
-  width:95%;
-  max-width:420px;
-}
-
-input, select{
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  border-radius:8px;
-  border:none;
-}
-
-@media(max-width:600px){
-  .type-item{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-</style>
+<title>Lineup Hyundai 2026</title>
+<link rel="stylesheet" href="style.css">
+<script src="global.js" defer></script>
 </head>
-
 <body>
 
-<div class="container">
-  <!-- ================= STARGAZER ================= -->
-<div class="unit-card">
-  <div class="unit-header">
-    <h2>STARGAZER</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('sg')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Stargazer')">Test Drive</button>
+<header>
+  <div class="logo-wrap">
+    <img src="logo.png">
+    <div class="logo-text">
+      <small>Official Sales</small>
+      <strong>Ardi Hyundai</strong>
     </div>
   </div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
 
-  <div id="sg" class="type-list">
-
-    <!-- FULL TYPE STARGAZER -->
-    <div class="type-item"><span>Active MT - Rp 259.700.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Active MT',259700000)">Simulasi</button></div>
-    <div class="type-item"><span>Active IVT - Rp 273.100.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Active IVT',273100000)">Simulasi</button></div>
-    <div class="type-item"><span>Essential MT 7 Seat - Rp 271.800.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Essential MT 7 Seat',271800000)">Simulasi</button></div>
-    <div class="type-item"><span>Essential MT 6 Seat - Rp 272.800.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Essential MT 6 Seat',272800000)">Simulasi</button></div>
-    <div class="type-item"><span>Essential IVT 7 Seat - Rp 283.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Essential IVT 7 Seat',283500000)">Simulasi</button></div>
-    <div class="type-item"><span>Essential IVT 6 Seat - Rp 284.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Essential IVT 6 Seat',284500000)">Simulasi</button></div>
-    <div class="type-item"><span>Essential Tech 7 Seat - Rp 304.000.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Essential Tech 7 Seat',304000000)">Simulasi</button></div>
-    <div class="type-item"><span>Essential Tech 6 Seat - Rp 305.000.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Essential Tech 6 Seat',305000000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT 7 Seat 1 Tone - Rp 333.400.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Prime IVT 7 Seat 1 Tone',333400000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT 7 Seat 2 Tone - Rp 334.900.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Prime IVT 7 Seat 2 Tone',334900000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT 6 Seat 1 Tone - Rp 334.400.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Prime IVT 6 Seat 1 Tone',334400000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT 6 Seat 2 Tone - Rp 335.900.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Prime IVT 6 Seat 2 Tone',335900000)">Simulasi</button></div>
-    <div class="type-item"><span>Style 6 Seat - Rp 350.950.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','Style 6 Seat',350950000)">Simulasi</button></div>
-    <div class="type-item"><span>X Prime 6 Seat (1 Tone Roof) - Rp 361.300.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','X Prime 6 Seat 1 Tone',361300000)">Simulasi</button></div>
-    <div class="type-item"><span>X Prime 6 Seat (2 Tone Roof) - Rp 362.800.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','X Prime 6 Seat 2 Tone',362800000)">Simulasi</button></div>
-    <div class="type-item"><span>X Style 7 Seat - Rp 349.450.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','X Style 7 Seat',349450000)">Simulasi</button></div>
-    <div class="type-item"><span>X Prime 7 Seat (1 Tone Roof) - Rp 360.300.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','X Prime 7 Seat 1 Tone',360300000)">Simulasi</button></div>
-    <div class="type-item"><span>X Prime 7 Seat (2 Tone Roof) - Rp 361.800.000</span><button class="btn btn-primary" onclick="openSimulasi('Stargazer','X Prime 7 Seat 2 Tone',361800000)">Simulasi</button></div>
-
-  </div>
+<div class="side-menu" id="sideMenu">
+  <a href="index.html">Home</a>
+  <a href="#" onclick="openSimulasi();closeMenu()">Simulasi Kredit</a>
+  <a href="#" onclick="openTestDrive();closeMenu()">Test Drive</a>
+  <a href="spk.html">SPK</a>
+  <a href="artikel.html">Artikel</a>
+  <a href="dealer.html">Tentang</a>
+  <a href="privacy policy.html">Privacy Policy</a>
 </div>
+
+<section class="lineup">
+
+<!-- ================= STARGAZER ================= -->
+<div class="unit-card">
+  <span class="badge best">BEST SELLER</span>
+  <img src="stargazer.png">
+  <h2>Stargazer</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+    Active MT - Rp 259.700.000<br>
+    Active IVT - Rp 273.100.000<br>
+    Essential MT 7 Seat - Rp 271.800.000<br>
+    Essential MT 6 Seat - Rp 272.800.000<br>
+    Essential IVT 7 Seat - Rp 283.500.000<br>
+    Essential IVT 6 Seat - Rp 284.500.000<br>
+    Essential Tech 7 Seat - Rp 304.000.000<br>
+    Essential Tech 6 Seat - Rp 305.000.000<br>
+    Prime IVT 7 Seat 1 Tone - Rp 333.400.000<br>
+    Prime IVT 7 Seat 2 Tone - Rp 334.900.000<br>
+    Prime IVT 6 Seat 1 Tone - Rp 334.400.000<br>
+    Prime IVT 6 Seat 2 Tone - Rp 335.900.000<br>
+    Style 6 Seat - Rp 350.950.000<br>
+    X Prime 6 Seat 1 Tone - Rp 361.300.000<br>
+    X Prime 6 Seat 2 Tone - Rp 362.800.000<br>
+    X Style 7 Seat - Rp 349.450.000<br>
+    X Prime 7 Seat 1 Tone - Rp 360.300.000<br>
+    X Prime 7 Seat 2 Tone - Rp 361.800.000
+  </div>
+
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
+</div>
+
 <!-- ================= STARGAZER CARTENZ ================= -->
 <div class="unit-card">
-  <div class="unit-header">
-    <h2>STARGAZER CARTENZ</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('cartenz')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Stargazer Cartenz')">Test Drive</button>
-    </div>
+  <span class="badge best">BEST SELLER</span>
+  <img src="cartenz.png">
+  <h2>Stargazer Cartenz</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+Trend+MT - Rp 277.500.000<br>
+Trend+IVT - Rp 287.750.000<br>
+Style MT 7 Seat - Rp 298.000.000<br>
+Style MT Captain Seat - Rp 301.500.000<br>
+Style IVT 7 Seat - Rp 308.200.000<br>
+Style IVT Captain Seat - Rp 311.700.000<br>
+Smart IVT 7 Seat - Rp 341.750.000<br>
+Smart IVT Captain Seat - Rp 345.250.000<br>
+Prime IVT 7 Seat - Rp 359.700.000<br>
+Prime IVT Captain Seat - Rp 363.200.000<br>
+Cartenz X Trend 7 Seat - Rp 371.750.000<br>
+Cartenz X Trend Captain Seat - Rp 375.250.000<br>
+Cartenz X Style 7 Seat - Rp 385.200.000<br>
+Cartenz X Style Captain Seat - Rp 388.700.000<br>
+Cartenz X Prime Package 7 Seat - Rp 402.200.000<br>
+Cartenz X Prime Package Captain Seat - Rp 405.700.000
   </div>
 
-  <div id="cartenz" class="type-list">
-
-    <div class="type-item"><span>Trend MT - Rp 277.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Trend MT',277500000)">Simulasi</button></div>
-    <div class="type-item"><span>Trend IVT - Rp 287.750.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Trend IVT',287750000)">Simulasi</button></div>
-    <div class="type-item"><span>Style MT 7 Seat - Rp 298.000.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Style MT 7 Seat',298000000)">Simulasi</button></div>
-    <div class="type-item"><span>Style MT Captain Seat - Rp 301.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Style MT Captain Seat',301500000)">Simulasi</button></div>
-    <div class="type-item"><span>Style IVT 7 Seat - Rp 308.200.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Style IVT 7 Seat',308200000)">Simulasi</button></div>
-    <div class="type-item"><span>Style IVT Captain Seat - Rp 311.700.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Style IVT Captain Seat',311700000)">Simulasi</button></div>
-    <div class="type-item"><span>Smart IVT 7 Seat - Rp 341.750.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Smart IVT 7 Seat',341750000)">Simulasi</button></div>
-    <div class="type-item"><span>Smart IVT Captain Seat - Rp 345.250.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Smart IVT Captain Seat',345250000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT 7 Seat - Rp 359.700.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Prime IVT 7 Seat',359700000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT Captain Seat - Rp 363.200.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz','Prime IVT Captain Seat',363200000)">Simulasi</button></div>
-
-    <h4>Cartenz X</h4>
-
-    <div class="type-item"><span>Trend 7 Seat - Rp 371.750.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz X','Trend 7 Seat',371750000)">Simulasi</button></div>
-    <div class="type-item"><span>Trend Captain Seat - Rp 375.250.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz X','Trend Captain Seat',375250000)">Simulasi</button></div>
-    <div class="type-item"><span>Style 7 Seat - Rp 385.200.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz X','Style 7 Seat',385200000)">Simulasi</button></div>
-    <div class="type-item"><span>Style Captain Seat - Rp 388.700.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz X','Style Captain Seat',388700000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime Package 7 Seat - Rp 402.200.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz X','Prime Package 7 Seat',402200000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime Package Captain Seat - Rp 405.700.000</span><button class="btn btn-primary" onclick="openSimulasi('Cartenz X','Prime Package Captain Seat',405700000)">Simulasi</button></div>
-
-  </div>
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
 </div>
+
 <!-- ================= CRETA ================= -->
 <div class="unit-card">
-  <div class="unit-header">
-    <h2>CRETA</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('creta')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Creta')">Test Drive</button>
-    </div>
+  <span class="badge best">BEST SELLER</span>
+  <img src="creta.png">
+  <h2>Creta</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+<div class="type-list">
+Active MT - Rp 301.700.000<br>
+Trend MT - Rp 333.650.000<br>
+Trend IVT - Rp 354.150.000<br>
+Style - Rp 398.650.000<br>
+Prime 1 Tone - Rp 428.950.000<br>
+Prime 2 Tone - Rp 431.950.000<br>
+N Line - Rp 462.500.000<br>
+N Line 2 Tone - Rp 465.500.000<br>
+N Line Turbo - Rp 509.300.000<br>
+N Line 2 Tone Turbo - Rp 512.300.000
+</div>
   </div>
 
-  <div id="creta" class="type-list">
-    <div class="type-item"><span>Active MT - Rp 291.300.000</span><button class="btn btn-primary" onclick="openSimulasi('Creta','Active MT',291300000)">Simulasi</button></div>
-    <div class="type-item"><span>Trend MT - Rp 313.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Creta','Trend MT',313500000)">Simulasi</button></div>
-    <div class="type-item"><span>Trend IVT - Rp 334.600.000</span><button class="btn btn-primary" onclick="openSimulasi('Creta','Trend IVT',334600000)">Simulasi</button></div>
-    <div class="type-item"><span>Style IVT - Rp 376.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Creta','Style IVT',376500000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime IVT - Rp 404.000.000</span><button class="btn btn-primary" onclick="openSimulasi('Creta','Prime IVT',404000000)">Simulasi</button></div>
-  </div>
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
 </div>
+
 <!-- ================= KONA EV ================= -->
 <div class="unit-card">
-  <div class="unit-header">
-    <h2>KONA EV 2026</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('kona')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Kona EV')">Test Drive</button>
-    </div>
+  <span class="badge ev">EV</span>
+  <img src="kona.png">
+  <h2>Kona EV</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+Style Reguler - Rp 566.250.000<br>
+Prime Reguler - Rp 584.500.000<br>
+Prime Extended - Rp 635.500.000<br>
+Signature Reguler - Rp 652.650.000<br>
+Signature Reguler Two Tone - Rp 655.650.000<br>
+Signature Extended - Rp 669.550.000<br>
+Signature Extended Two Tone - Rp 672.550.000<br>
+N Line - Rp 690.550.000<br>
+N Line Two Tone - Rp 693.550.000
   </div>
 
-  <div id="kona" class="type-list">
-    <div class="type-item"><span>Style Reguler - Rp 566.250.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Style Reguler',566250000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime Reguler - Rp 584.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Prime Reguler',584500000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime Extended - Rp 635.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Prime Extended',635500000)">Simulasi</button></div>
-    <div class="type-item"><span>Signature Reguler - Rp 652.650.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Signature Reguler',652650000)">Simulasi</button></div>
-    <div class="type-item"><span>Signature Reguler Two Tone - Rp 655.650.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Signature Reguler Two Tone',655650000)">Simulasi</button></div>
-    <div class="type-item"><span>Signature Extended - Rp 669.550.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Signature Extended',669550000)">Simulasi</button></div>
-    <div class="type-item"><span>Signature Extended Two Tone - Rp 672.550.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','Signature Extended Two Tone',672550000)">Simulasi</button></div>
-    <div class="type-item"><span>N Line - Rp 690.550.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','N Line',690550000)">Simulasi</button></div>
-    <div class="type-item"><span>N Line Two Tone - Rp 693.550.000</span><button class="btn btn-primary" onclick="openSimulasi('Kona EV','N Line Two Tone',693550000)">Simulasi</button></div>
-  </div>
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
 </div>
+
 <!-- ================= IONIQ 5 ================= -->
 <div class="unit-card">
-  <div class="unit-header">
-    <h2>IONIQ 5 2026</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('ioniq')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Ioniq 5')">Test Drive</button>
-    </div>
+  <span class="badge ev">EV</span>
+  <img src="ioniq5.png">
+  <h2>IONIQ 5</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+Signature Extended - Rp 926.600.000<br>
+Signature Reguler - Rp 874.900.000<br>
+Prime Extended - Rp 852.500.000<br>
+Prime Reguler - Rp 810.000.000
   </div>
 
-  <div id="ioniq" class="type-list">
-    <div class="type-item"><span>Signature Extended - Rp 926.600.000</span><button class="btn btn-primary" onclick="openSimulasi('Ioniq 5','Signature Extended',926600000)">Simulasi</button></div>
-    <div class="type-item"><span>Signature Reguler - Rp 874.900.000</span><button class="btn btn-primary" onclick="openSimulasi('Ioniq 5','Signature Reguler',874900000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime Extended - Rp 852.500.000</span><button class="btn btn-primary" onclick="openSimulasi('Ioniq 5','Prime Extended',852500000)">Simulasi</button></div>
-    <div class="type-item"><span>Prime Reguler - Rp 810.000.000</span><button class="btn btn-primary" onclick="openSimulasi('Ioniq 5','Prime Reguler',810000000)">Simulasi</button></div>
-  </div>
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
 </div>
+
 <!-- ================= SANTA FE ================= -->
 <div class="unit-card">
-  <div class="unit-header">
-    <h2>SANTA FE 2026</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('santafe')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Santa Fe')">Test Drive</button>
-    </div>
+  <span class="badge premium">SUPER PREMIUM</span>
+  <img src="santafe.png">
+  <h2>Santa Fe</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+G 2.5 8AT Prime - Rp 737.300.000<br>
+G 2.5 8AT Calligraphy - Rp 826.800.000<br>
+D 1.6 8AT HEV Prime - Rp 828.900.000<br>
+D 1.6 8AT HEV Calligraphy - Rp 916.200.000
   </div>
 
-  <div id="santafe" class="type-list">
-    <div class="type-item"><span>G 2.5 8AT Prime - Rp 737.300.000</span><button class="btn btn-primary" onclick="openSimulasi('Santa Fe','G 2.5 Prime',737300000)">Simulasi</button></div>
-    <div class="type-item"><span>G 2.5 8AT Calligraphy - Rp 826.800.000</span><button class="btn btn-primary" onclick="openSimulasi('Santa Fe','G 2.5 Calligraphy',826800000)">Simulasi</button></div>
-    <div class="type-item"><span>D 1.6 HEV Prime - Rp 828.900.000</span><button class="btn btn-primary" onclick="openSimulasi('Santa Fe','HEV Prime',828900000)">Simulasi</button></div>
-    <div class="type-item"><span>D 1.6 HEV Calligraphy - Rp 916.200.000</span><button class="btn btn-primary" onclick="openSimulasi('Santa Fe','HEV Calligraphy',916200000)">Simulasi</button></div>
-  </div>
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
 </div>
+
 <!-- ================= PALISADE ================= -->
 <div class="unit-card">
-  <div class="unit-header">
-    <h2>PALISADE 2026</h2>
-    <div>
-      <button class="btn btn-primary" onclick="toggleType('palisade')">Lihat Type & OTR</button>
-      <button class="btn btn-success" onclick="openTestDrive('Palisade')">Test Drive</button>
-    </div>
+  <span class="badge premium">SUPER PREMIUM</span>
+  <img src="palisade.png">
+  <h2>Palisade</h2>
+
+  <button class="btn btn-outline" onclick="toggleType(this)">
+    Type & OTR
+  </button>
+
+  <div class="type-list">
+HEV Signature GRG - Rp 1.133.400.000<br>
+HEV Calligraphy GRA - Rp 1.306.200.000<br>
+HEV Calligraphy AWD GRA - Rp 1.393.300.000
   </div>
 
-  <div id="palisade" class="type-list">
-    <div class="type-item"><span>HEV Signature GRG - Rp 1.133.400.000</span><button class="btn btn-primary" onclick="openSimulasi('Palisade','Signature GRG',1133400000)">Simulasi</button></div>
-    <div class="type-item"><span>HEV Calligraphy GRA - Rp 1.306.200.000</span><button class="btn btn-primary" onclick="openSimulasi('Palisade','Calligraphy GRA',1306200000)">Simulasi</button></div>
-    <div class="type-item"><span>HEV Calligraphy AWD GRA - Rp 1.393.300.000</span><button class="btn btn-primary" onclick="openSimulasi('Palisade','Calligraphy AWD',1393300000)">Simulasi</button></div>
-  </div>
+  <button class="btn btn-primary" onclick="openSimulasi()">Simulasi</button>
+  <button class="btn btn-success" onclick="openTestDrive()">Test Drive</button>
 </div>
 
-  <!-- ================= MODAL SIMULASI ================= -->
-<div id="modalSimulasi" class="modal">
-  <div class="modal-content">
-    <h3>Simulasi Kredit</h3>
+</section>
 
-    <input type="text" id="unitNama" readonly>
-    <input type="text" id="unitType" readonly>
-    <input type="text" id="hargaOTR" readonly>
+<footer>
+© 2026 Official Sales Ardi Hyundai
+</footer>
 
-    <label>Tenor (tahun)</label>
-    <select id="tenor">
-      <option value="1">1 Tahun</option>
-      <option value="2">2 Tahun</option>
-      <option value="3">3 Tahun</option>
-      <option value="4">4 Tahun</option>
-      <option value="5">5 Tahun</option>
-    </select>
-
-    <label>DP Mode</label>
-    <select id="dpMode" onchange="toggleDPManual()">
-      <option value="auto">Auto 20%</option>
-      <option value="manual">Input Manual</option>
-    </select>
-
-    <input type="number" id="dpManual" placeholder="Masukkan DP Manual" style="display:none;">
-
-    <label>Bunga Leasing</label>
-    <select id="bunga">
-      <option value="0.04">Mandiri (4%)</option>
-      <option value="0.05">BCA Finance (5%)</option>
-      <option value="0.06">Adira (6%)</option>
-    </select>
-
-    <button class="btn btn-primary" onclick="hitungSimulasi()">Hitung</button>
-
-    <div id="hasilSimulasi" style="margin-top:10px;"></div>
-
-    <button class="btn btn-success" onclick="kirimWA()">Kirim ke WhatsApp</button>
-    <button class="btn btn-primary" onclick="generatePDF()">Download PDF</button>
-
-    <button class="btn" onclick="closeModal()">Tutup</button>
-  </div>
-</div>
-
-
-<!-- ================= MODAL TEST DRIVE ================= -->
-<div id="modalTestDrive" class="modal">
-  <div class="modal-content">
-    <h3>Booking Test Drive</h3>
-
-    <input type="text" id="tdUnit" readonly>
-    <input type="text" id="tdNama" placeholder="Nama Lengkap">
-    <input type="text" id="tdHP" placeholder="No HP">
-    <input type="text" id="tdKota" placeholder="Kota / Alamat">
-
-    <button class="btn btn-success" onclick="kirimTestDrive()">Kirim</button>
-    <button class="btn" onclick="closeTestDrive()">Tutup</button>
-  </div>
-</div>
-</div>
 </body>
 </html>
