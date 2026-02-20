@@ -277,3 +277,21 @@ Mohon info promo terbaik 🙏`;
   const url = "https://wa.me/6287772805133?text=" + encodeURIComponent(pesan);
   window.open(url, "_blank");
 }
+function generatePDF(){
+
+  const unit = document.getElementById("unitSelect").value;
+  const type = document.getElementById("typeSelect").value;
+  const harga = document.getElementById("hargaOTR").value;
+
+  const content = `
+  <h2>Penawaran Resmi Hyundai</h2>
+  <p>Unit: ${unit}</p>
+  <p>Type: ${type}</p>
+  <p>Harga OTR: Rp ${harga}</p>
+  <p>Dealer: Ardi Hyundai Cirebon</p>
+  `;
+
+  const newWindow = window.open("", "", "width=800,height=600");
+  newWindow.document.write(content);
+  newWindow.print();
+}
