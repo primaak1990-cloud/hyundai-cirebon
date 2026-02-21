@@ -393,3 +393,7 @@ window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`,"_blank
 function closeMenu(){
   document.getElementById("sideMenu").classList.remove("active");
 }
+
+<button class="btn btn-outline" onclick="toggleType(this)">
+Type & OTR
+</button>
