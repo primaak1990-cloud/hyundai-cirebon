@@ -249,38 +249,61 @@ color:#000;
 100%{box-shadow:0 0 5px rgba(255,255,255,0.3);}
 }
 
-/* ===============================
-   MODAL
-================================ */
+/* ================= MODAL PREMIUM ================= */
 .modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
-z-index:3000;
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  justify-content:center;
+  align-items:center;
 }
 
 .modal-content{
-background:#0d2c47;
-padding:25px;
-border-radius:20px;
-width:90%;
-max-width:420px;
+  background:linear-gradient(135deg,#0f2b46,#123a5e);
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  color:white;
+  box-shadow:0 0 40px rgba(0,255,255,0.3);
+  animation:fadeIn 0.3s ease-in-out;
 }
 
 .modal-content input,
 .modal-content select{
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:10px;
-border:none;
-outline:none;
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+
+.modal-content button{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:30px;
+  border:none;
+  background:linear-gradient(90deg,#00c6ff,#00ff95);
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.modal-content button:hover{
+  transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(0.9);}
+  to{opacity:1;transform:scale(1);}
 }
 
 /* ===============================
