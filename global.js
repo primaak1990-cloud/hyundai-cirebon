@@ -125,20 +125,101 @@ function loadType() {
    DATA HARGA OTR
 ================================ */
 
+/* ===============================
+   DATA HARGA OTR FULL 2026
+================================ */
+
 const hargaData = {
+
   "Creta": {
     "Active MT": 309300000,
     "Trend IVT": 363150000,
-    "Style IVT": 408850000
+    "Style IVT": 408850000,
+    "Prime IVT (One Tone Sunroof)": 440000000,
+    "Prime IVT (Two Tone Sunroof)": 443000000,
+    "Alpha Edition (One Tone Sunroof)": 456500000,
+    "Alpha Edition (Two Tone Sunroof)": 459500000,
+    "N Line (One Tone Sunroof)": 474500000,
+    "N Line (Two Tone Sunroof)": 477500000,
+    "N Line Turbo (One Tone Sunroof)": 522500000,
+    "N Line Turbo (Two Tone Sunroof)": 525500000
   },
+
+  "Kona EV": {
+    "Style Reguler": 566250000,
+    "Prime Reguler": 584500000,
+    "Prime Extended": 635500000,
+    "Signature Reguler": 652650000,
+    "Signature Reguler Two Tone": 655650000,
+    "Signature Extended": 669550000,
+    "Signature Extended Two Tone": 672550000,
+    "N Line": 690550000,
+    "N Line Two Tone": 693550000
+  },
+
+  "IONIQ 5": {
+    "Prime Reguler": 810000000,
+    "Prime Extended": 852500000,
+    "Signature Reguler": 874900000,
+    "Signature Extended": 926600000
+  },
+
   "Stargazer": {
     "Active MT": 259700000,
-    "Prime IVT": 333400000
+    "Active IVT": 273100000,
+    "Essential MT 7 Seat": 271800000,
+    "Essential MT 6 Seat": 272800000,
+    "Essential IVT 7 Seat": 283500000,
+    "Essential IVT 6 Seat": 284500000,
+    "Essential Tech 7 Seat": 304000000,
+    "Essential Tech 6 Seat": 305000000,
+    "Prime IVT 7 Seat 1 Tone": 333400000,
+    "Prime IVT 7 Seat 2 Tone": 334900000,
+    "Prime IVT 6 Seat 1 Tone": 334400000,
+    "Prime IVT 6 Seat 2 Tone": 335900000,
+    "Style 6 Seat": 350950000,
+    "X Prime 6 Seat (One Tone Roof)": 361300000,
+    "X Prime 6 Seat (Two Tone Roof)": 362800000,
+    "X Style 7 Seat": 349450000,
+    "X Prime 7 Seat (One Tone Roof)": 360300000,
+    "X Prime 7 Seat (Two Tone Roof)": 361800000
   },
-  "Kona EV": {
-    "Prime": 584500000,
-    "Signature": 652650000
+
+  "Stargazer Cartenz": {
+    "Trend MT": 277500000,
+    "Trend IVT": 287750000,
+    "Style MT 7 Seat": 298000000,
+    "Style MT Captain Seat": 301500000,
+    "Style IVT 7 Seat": 308200000,
+    "Style IVT Captain Seat": 311700000,
+    "Smart MT 7 Seat": 341750000,
+    "Smart MT Captain Seat": 345250000,
+    "Prime IVT 7 Seat": 359700000,
+    "Prime IVT Captain Seat": 363200000
+  },
+
+  "Stargazer CartenzX": {
+    "Trend 7 Seat": 371750000,
+    "Trend Captain Seat": 375250000,
+    "Style 7 Seat": 385200000,
+    "Style Captain Seat": 388700000,
+    "Prime Package 7 Seat": 402200000,
+    "Prime Package Captain Seat": 405700000
+  },
+
+  "Palisade": {
+    "HEV Signature GRG": 1133400000,
+    "HEV Calligraphy GRA": 1306200000,
+    "HEV Calligraphy AWD GRA": 1393300000
+  },
+
+  "Santa Fe": {
+    "2.5 8AT Prime": 737300000,
+    "2.5 8AT Calligraphy": 826800000,
+    "1.6 8AT HEV Prime": 828900000,
+    "1.6 8AT HEV Calligraphy": 916200000
   }
+
 };
 
 /* ===============================
